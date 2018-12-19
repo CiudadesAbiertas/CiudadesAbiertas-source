@@ -1,0 +1,360 @@
+.home {
+
+     &__subtitle {
+          font-size: 1.786rem;
+          line-height: 2.857rem;
+          display: block;
+          max-width: 525px;
+     }
+     &__text {
+          display: block;
+          margin-top: 1.786rem;
+          font-size: 1.143rem;
+          line-height: 2.143rem;
+          color: $dark-light;
+          text-align: justify;
+     }
+     &__details-btn{
+                  cursor: pointer;
+                  display: none;
+                  &.active{
+                       display: block;
+                  }
+                  &__icon{
+                       width: 20px;
+                       height: 20px;
+                       display: inline-block;
+                       margin-right: 10px;
+                       vertical-align: middle;
+                  }
+        
+                  &__text{
+                       color: $blue-dark;
+                       font-size: 16px;
+                       font-weight: bold;
+                       vertical-align: middle;
+                  }
+             }
+
+     .home-header {
+          background-color: $orange-light;
+          position: relative;
+          padding: 0 100px 160px 100px;
+          &__content {
+               max-width: 1280px;
+               margin: auto;
+               padding-top: 2.5rem;
+               display: flex;
+               justify-content: space-between;
+          }
+          &__bg-img {
+               display: block;
+               position: absolute;
+               bottom: 0;
+               left: 0;
+          }
+          &__subtitle {
+               font-weight: bold;
+          }
+          &__left-info {
+               max-width: 470px;
+               display: flex;
+               flex-direction: column;
+               justify-content: center;
+               margin-right: 30px;
+               position: relative;
+          }
+          &__right-info{
+               width: 500px;
+          }
+          &__text {
+               font-size: 1.429rem;
+               color: $dark;
+               text-align: justify;
+          }
+
+          &__btn{
+               @include box-shadow(4px, 1px, 14px, rgba(0,0,0,0.2));
+          }
+     }
+     .home-aboutUs{
+          padding: 40px 100px 110px 100px;
+          &__content{
+               max-width: 1280px;
+               margin: auto;
+          }
+     }
+     .home-lineasActuacion{
+          background-color: $gray-medium;
+          position: relative;
+          padding: 0 100px 110px 100px;
+          &__bg-img{
+               display: block;
+               position: absolute;
+               z-index: 0; //para poner la imagen de background como primera capa y que no pise al boton está bien así?
+               top: 0;
+               right: 0;
+               &--bottom{
+                    bottom: 0;
+                    top: initial;
+               }
+          }
+
+          &__subtitle{
+               margin: auto;
+          }
+
+          &__content{
+               max-width: 1000px;
+               margin: auto;
+               padding-top: 140px;
+               padding-bottom: 3.571rem;
+               text-align: center;
+          }
+
+          &__items{
+               margin-top: 60px;
+               display: flex;
+               justify-content: space-around;
+          }
+
+          &__items-box{
+               max-width: 265px;
+               text-align: center;
+               
+               &:nth-child(2){
+                    margin: 0 15px;
+               }
+          }
+
+          &__items-title{
+               display: block;
+               font-weight: bold;
+               margin: 1.429rem 0;
+               font-size: 17px;
+          }
+
+          &__items-text{
+               display: block;
+               color: $dark-light;
+               line-height: 1.786rem;
+               font-size: 1.143rem;
+               min-height: 190px;
+               position: relative;
+               display: flex;
+               justify-content: space-around;
+               align-items: center;
+               flex-direction: column;
+               &__text{
+                    display: inline-block;
+                    min-height: 200px;
+               }
+          }
+
+          &__icons{
+               width: 85px;
+               display: inline-block;
+          }
+          &__icon-plus{
+               width: 25px;
+               display: inline-block;
+               z-index: 1; //capa justo despues de background img, hacer el boton entero clicable, y que no lo pise la bkg-img
+               margin-top: 5px;
+          }
+          &__text{
+               text-align: center;
+          }
+     }
+     .home-documentation{
+          padding: 0 100px 220px 100px;
+          &__content{
+               max-width: 1280px;
+               margin: auto;
+               padding-top: 2.5rem;
+               display: flex;
+               justify-content: space-between;
+          }
+
+          &__left-info {
+               max-width: 470px;
+               display: flex;
+               flex-direction: column;
+               justify-content: center;
+               margin-right: 30px;
+               position: relative;
+          }
+          &__right-info{
+               width: 380px;
+          }
+
+          &__btn{
+               width: 175px;
+               margin-top: 2.857rem;
+               @include box-shadow(4px, 1px, 14px, rgba(0,0,0,0.2));
+          }
+     }
+}
+
+/* ---- Responsive ---- */
+@media (min-width: $sm-break) and (max-width: $md-break){
+     .home{
+          .home-lineasActuacion{
+               &__items-text{
+                    min-height: 220px;
+               }
+          }
+     }
+}
+@media (min-width: $xs-break) and (max-width: $md-break){
+     .home{
+          .home-header{
+               padding: 0 20px 90px 20px;
+               &__left-info{
+                    margin-right: 10px;
+               }
+          }
+
+          .home-documentation{
+               padding: 0 20px 110px 20px;
+               &__left-info{
+                    margin-right: 10px;
+               }
+          }
+          
+          .home-aboutUs, .home-lineasActuacion{
+               padding: 20px 20px 30px 20px;
+          }
+
+          .home-lineasActuacion{
+               &__items{
+                    margin-top: 30px;
+               }
+          }
+     }
+}
+
+@media (min-width: $xs-break) and (max-width: $sm-break){
+     .home{
+          .home-lineasActuacion{
+               &__content{
+                    max-width: 500px;
+               }
+          }
+     }
+}
+
+@media screen and (max-width: $sm-break){
+     .home{
+          .home-lineasActuacion{
+               padding: 20px 15px;
+               &__content{
+                    padding-top: 50px;
+               }
+               &__items{
+                    flex-direction: column;
+                    margin-top: 30px;
+               }
+
+               &__items-text{
+                    position: initial;
+                    display: block;
+                    min-height: auto;
+                    &__text{
+                        display: inline-block;
+                        min-height: inherit;
+                    }
+               }
+
+               &__icon-plus{
+                    position: initial;
+                    margin-bottom: 0;
+                    margin-top: 20px;
+               }
+     
+               &__items-box{
+                    max-width: none;
+                    margin: 0 0 50px 0;
+                    &:last-child{
+                         margin-bottom: 0;
+                    }
+                    &:nth-child(2){
+                         margin: 0 15px 40px 15px;
+                    }
+               }
+          }
+     }
+}
+
+@media screen and (max-width: $xs-break) {
+     .home {
+          .home-header, .home-documentation{
+               margin-top: -5px;
+               padding: 0 15px;
+
+               &__left-info {
+                    display: block;
+                    margin-right: 0;
+                    text-align: center;
+                    margin-bottom: 60px;
+                    max-width: none;
+               }
+
+               &__right-info{
+                    display: none;
+               }
+          }
+
+          .home-documentation{
+               padding: 20px 15px 50px 15px;
+          }
+
+          .home-aboutUs{
+               padding: 20px 15px;
+          }
+
+          &__btn{
+               min-width: 150px;
+          }
+     }
+}
+
+.js-to_expand[aria-hidden=true],
+.js-to_expand[data-hidden=true] {
+  display: none;
+}
+/* optionnal or prefix with .js with modernizr */
+.expandmore__button[aria-expanded=false] > .expandmore__symbol:before,
+.expandmore__button[data-expanded=false] > .expandmore__symbol:before {
+  content : '+ ';
+}
+.expandmore__button[aria-expanded=true] > .expandmore__symbol:before,
+.expandmore__button[data-expanded=true] > .expandmore__symbol:before {
+  content : '− ';
+}
+.expandmore__button {
+  background: none;
+  font-size: inherit;
+  color: inherit;
+}
+
+/* This is the opened state */
+.animated-expandmore__to_expand {
+     display: block;
+     overflow: hidden;
+     opacity: 1;
+     transition: visibility 0s ease, max-height 0.5s ease, opacity 0.5s ease ;
+     max-height: 80em;
+     /* magic number for max-height = enough height */
+     visibility: visible;
+     transition-delay: 0s;
+    }
+    /* This is the hidden state */
+    [data-hidden=true].animated-expandmore__to_expand {
+     display: block;
+     max-height: 0;
+     opacity: 0;
+     visibility: hidden;
+     transition-delay: 0.5s, 0s, 0s;
+    }
+
+    

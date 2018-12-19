@@ -1,0 +1,333 @@
+.footer {
+     padding: 4.286rem 1.786rem 1.786rem 1.786rem;
+     background-color: $orange-light;
+     font-size: 0.8rem;
+     position: absolute;
+     width: 100%;
+     bottom: 0;
+     &__content{
+          max-width: 1280px;
+          margin: auto;
+     }
+     &__logos-box{
+          margin-bottom: 0;
+          text-align: center;
+     }
+     &__logos {
+          display: inline-block;
+          margin-left: 44px;
+          &:first-child{
+               margin: 0;
+          }
+     }
+     &__logos-bottom{
+          margin-top: 35px;
+     }
+     &__logoGobEspaña {
+          width: 204px;
+     }
+     &__logoRed {
+          width: 70px;
+          margin-left: 10px;
+          line-height: 50px;
+          vertical-align: text-bottom;
+     }
+     &__logoAcoruña {
+          width: 263px;
+     }
+     &__logoMadrid {
+          width: 147px;
+     }
+     &__logoSantiago {
+          width: 312px;
+     }
+     &__logoZaragoza {
+          width: 264px;
+     }
+     &__logoCiudadesInteligentes{
+          width: 141px;
+     }
+     &__logoUnionEuropea{
+          width: 355px;
+          margin-left: 88px;
+     }
+
+     &__logoCiudadesAbiertas{
+          width: 156px;
+     }
+
+     &__bottom{
+          margin-top: 3.571rem;
+          position: relative;
+     }
+
+     &__navbar{
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          color: $dark-light;
+          font-size: 14px;
+          &__items{
+               list-style: none;
+               display: inline-block;
+               
+               a{
+                    color: $dark-light;
+                    vertical-align: middle
+               }
+               &::after{
+                    content: ' ';
+                    margin: 0 10px;
+                    display: inline-block;
+                    vertical-align: middle;
+                    width: 2px;
+                    height: 14px;
+                    background-color: $dark-light;
+               }
+               &:last-child{
+                    &::after{
+                         content: none;
+                    }
+               }
+          }
+     }
+}
+
+
+/* ---- Responsive ---- */
+
+
+// @media (min-width: $md-break) and (max-width: 1280px){
+//      .footer{
+//           &__logos-box{
+//                display: flex;
+//                flex-direction: row;   
+//           }
+//      }
+// }
+
+// @media (min-width: $sm-break) and (max-width: $md-break){
+//      .footer{
+//           &__logos-box{
+//                display: flex;
+//                flex-direction: row;
+//                flex-wrap: wrap;
+//                justify-content: center;
+//                max-width: 800px;
+//                margin: auto;
+//                flex-flow: wrap-reverse;
+//           }
+
+
+//           &__bottom{
+//                margin-top: 0;
+//           }
+
+//           &__logos{
+//                margin-bottom: 35px;
+//                &:nth-child(1) { order: 6; }
+//                &:nth-child(2) { order: 2; }
+//                &:nth-child(3) { order: 2; }
+//                &:nth-child(4) { order: 3; }
+//                &:nth-child(5) { order: 4; }
+//                &:nth-child(6) { order: 7; }
+//                &:nth-child(7) { order: 7; }
+//           }
+//      }
+// }
+
+@media (max-width: 1177px){
+     .footer{
+          &__logos {
+               
+               margin-left: 35px;
+
+          }
+          &__logoGobEspaña {
+               width: 168px;
+          }
+          &__logoRed {
+               width: 57px;
+               margin-left: 10px;
+               line-height: 45px;
+               vertical-align: text-bottom;
+          }
+          &__logoAcoruña {
+               width: 215px;
+          }
+          &__logoMadrid {
+               width: 120px;
+          }
+          &__logoSantiago {
+               width: 255px;
+          }
+          &__logoZaragoza {
+               width: 216px;
+          }
+          &__logoCiudadesInteligentes{
+               width: 115px;
+          }
+          &__logoUnionEuropea{
+               width: 290px;
+               margin-left: 70px;
+          }
+     }
+}
+
+@media (max-width: $md-break){
+     .footer{
+          &__logos {
+               
+               margin-left: 24px;
+
+          }
+          &__logoGobEspaña {
+               width: 128px;
+          }
+          &__logoRed {
+               width: 45px;
+               margin-left: 5px;
+               line-height: 35px;
+               vertical-align: text-bottom;
+          }
+          &__logoAcoruña {
+               width: 151px;
+          }
+          &__logoMadrid {
+               width: 85px;
+          }
+          &__logoSantiago {
+               width: 180px;
+          }
+          &__logoZaragoza {
+               width: 152px;
+          }
+          &__logoCiudadesInteligentes{
+               width: 80px;
+          }
+          &__logoUnionEuropea{
+               width: 225px;
+               margin-left: 48px;
+          }
+     }
+}
+
+
+// @media (max-width: $md-break){
+//      .footer{
+//           &__logos {
+               
+//                margin-left: 24px;
+
+//           }
+//           &__logoGobEspaña {
+//                width: 124px;
+//           }
+//           &__logoRed {
+//                width: 42px;
+//                margin-left: 5px;
+//                line-height: 30px;
+//                vertical-align: text-bottom;
+//           }
+//           &__logoAcoruña {
+//                width: 162px;
+//           }
+//           &__logoMadrid {
+//                width: 90px;
+//           }
+//           &__logoSantiago {
+//                width: 192px;
+//           }
+//           &__logoZaragoza {
+//                width: 162px;
+//           }
+//           &__logoCiudadesInteligentes{
+//                width: 85px;
+//           }
+//           &__logoUnionEuropea{
+//                width: 218px;
+//                margin-left: 48px;
+//           }
+//      }
+// }
+
+@media (max-width: $sm-break){
+     .footer{
+          padding: 35px 15px;
+          &__logos-box{
+               display: inherit;
+               max-width: 290px;
+               margin: auto;
+          }
+          
+
+          &__logos{
+               margin-bottom: 35px;
+               display: block;
+               margin-left: 0;
+               &:first-child{
+                    margin-bottom: 35px;
+               }
+          }
+
+          &__logos-top{
+               position: relative;
+          }
+
+          &__logoGobEspaña {
+               width: 188px;
+          }
+          &__logoRed {
+               width: 57px;
+               position: absolute;
+               top: 15px;
+               left: 200px;
+          }
+          &__logoAcoruña {
+               width: 215px;
+          }
+          &__logoMadrid {
+               width: 120px;
+          }
+          &__logoSantiago {
+               width: 255px;
+          }
+          &__logoZaragoza {
+               width: 216px;
+          }
+          &__logoCiudadesInteligentes{
+               width: 115px;
+          }
+          &__logoUnionEuropea{
+               width: 290px;
+          }
+
+          &__bottom{
+               // margin-top: 30px;
+               &::before{
+                    content: ' ';
+                    width: 100%;
+                    display: block;
+                    height: 1px;
+                    background-color: $dark-light;
+                    margin-bottom: 30px;
+                    opacity: 0.2;
+               }
+          }
+
+          &__logoCiudadesAbiertas{
+               display: inline-block;
+          }
+
+          &__logo-box{
+               text-align: center;
+          }
+
+          &__navbar{
+               position: inherit;
+               text-align: center;
+               margin-top: 20px;
+          }
+     }
+}
+

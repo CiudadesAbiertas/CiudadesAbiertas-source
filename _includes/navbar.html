@@ -1,0 +1,55 @@
+{% comment %}
+Copyright 2018 Ayuntamiento de A Coruña, Ayuntamiento de Madrid, Ayuntamiento de Santiago de Compostela, Ayuntamiento de Zaragoza, Entidad Pública Empresarial Red.es
+ 
+  This file is part of "Ciudades Abiertas website".
+ 
+  Licensed under the EUPL, Version 1.2 or – as soon they will be approved by the European Commission - subsequent versions of the EUPL (the "Licence");
+  You may not use this work except in compliance with the Licence.
+  You may obtain a copy of the Licence at:
+ 
+  https://joinup.ec.europa.eu/software/page/eupl
+ 
+  Unless required by applicable law or agreed to in writing, software distributed under the Licence is distributed on an "AS IS" basis,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the Licence for the specific language governing permissions and limitations under the Licence.
+
+
+{% endcomment %} 
+<header class="navbar">
+
+     <div class="navbar__content">
+          <!-- Logo and title -->
+          <div class="branding">
+               <h1 class="branding__title">
+                    <a href="/" title="Inicio" rel="home" class="main-logo">
+                         <img title="Logo de Ciudades abiertas. Ir a inicio" class="branding__logo" src="/assets/img/cabiertas/logo.svg" alt="Logo de Ciudades abiertas. Ir a inicio">
+                         <!-- <span class="main-logo-title-text">{{ site.theme_settings.title }}</span> -->
+                    </a>
+               </h1>
+          </div>
+
+          <!-- Toggle menu -->
+          <nav class="clear menu">
+               <a id="pull" class="toggle" href="#">
+                    <img alt="Abre el menu de navegación" src="/assets/img/cabiertas/menu-icon.svg">
+               </a>
+
+               <!-- Menu -->
+               <div class="menu__container">
+                    <ul class="hide menu__ul-rps">
+                         <li>
+                              <a class="menu__items clear{% if page.url == " / " %} active{% endif %}" href="/">Inicio</a>
+                         </li>
+                         <!-- Auto Generation of NORMAL pages in the navbar -->
+                         {% assign name_page = "" %} {% for item in site.data.topmenu %} {% if item.active == 1 %}
+                         <li class="menu__li">
+                              <a href="{{ item.url }}" class="clear{% if item.url == page.url or page.menu == item.code %} active{% endif %} menu__items">{{ item.title }}</a>
+                         </li>
+                         {% endif %} {% assign name_page = nav_page.title | append: name_page %} {% endfor %}
+
+                    </ul>
+               </div>
+
+          </nav>
+     </div>
+</header>

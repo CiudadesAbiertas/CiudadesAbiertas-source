@@ -1,0 +1,271 @@
+--- 
+layout: default 
+---
+{% comment %}
+Copyright 2018 Ayuntamiento de A Coruña, Ayuntamiento de Madrid, Ayuntamiento de Santiago de Compostela, Ayuntamiento de Zaragoza, Entidad Pública Empresarial Red.es
+ 
+  This file is part of "Ciudades Abiertas website".
+ 
+  Licensed under the EUPL, Version 1.2 or – as soon they will be approved by the European Commission - subsequent versions of the EUPL (the "Licence");
+  You may not use this work except in compliance with the Licence.
+  You may obtain a copy of the Licence at:
+ 
+  https://joinup.ec.europa.eu/software/page/eupl
+ 
+  Unless required by applicable law or agreed to in writing, software distributed under the Licence is distributed on an "AS IS" basis,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the Licence for the specific language governing permissions and limitations under the Licence.
+
+
+{% endcomment %} 
+<div class="lineasActuacion">
+     {% if page.class-img %}
+     <div class="lineasActuacion__header-img {{page.class-img}}"></div>
+     {% endif %}
+
+     <div class="lineasActuacion__content">
+          <div class="lineasActuacion__logo-box">
+               <img alt="Logo {{ page.title }}" class="lineasActuacion__logo" src="{{ page.logo }}">
+          </div>
+
+          <div class="lineasActuacion__info">
+               <h2 class="lineasActuacion__title {{page.class-color}}">
+                    {{ page.title }}
+               </h2>
+               <div class="tabs js js-tabs">
+                    <ul role="tablist" class="tabs__list js-tabs-list">
+                         <li class="tabs__list__item js-tablist-item active {{page.class-color}} {{class-threeTabs}}">
+                              <a href="#" title="Descripción" class="tabs__list__link js-tablist-link" id="tab1-label" role="tab" aria-controls="tabPanel1">
+                                   <h3 class="tabs__list__title">Descripción</h3>
+                              </a>
+                         </li>
+                         {% if page.class-threeTabs-vocabulario %}
+                         <li class="tabs__list__item js-tablist-item {{page.class-color}} {{class-threeTabs}}">
+                              <a href="#" title="Catálogo" class="tabs__list__link js-tablist-link" id="tab6-label" role="tab" aria-controls="tabPanel6">
+                                   <h3 class="tabs__list__title">Catálogo de Vocabularios</h3>
+                              </a>
+                         </li>
+                         {% endif %}
+
+                    </ul>
+                    <div class="tabs__panel">
+
+                         <div id="tabPanel1" role="tabpanel" aria-labelledby="tab1-label" class="tabs__panel__item js-tabs-panel-item">
+                         {% if page.general-info %}
+                         <!--<h2 class="cabiertas__title">GENERAL</h2>-->
+                         <p class="lineasActuacion__sectionText">{{page.general-info}}</p>
+                         {% endif %}
+                            
+                         <div class="lineasActuacion__section">
+                              {% if page.general-info-objetivos %}
+                              <h2 class="cabiertas__title">Objetivos</h2>
+                              <p class="lineasActuacion__sectionText">{{page.general-info-objetivos}}</p>
+                              {% endif %}
+                         </div>
+
+                         <h2 class="cabiertas__title">Actuaciones</h2>
+                         
+                         <div class="lineasActuacion__section">
+                              {% if page.general-info-vocabulario-v1 %}
+                              <p class="lineasActuacion__sectionText">{{page.general-info-vocabulario-prev}}</p>
+                              <h2 class="cabiertas__subtitle">Actuación 1: Desarrollo de Vocabularios y Estructuras de Datos</h2>
+                              
+                              <p class="lineasActuacion__sectionText">{{page.general-info-vocabulario-v1}}</p>
+                              
+                              {% endif %} 
+                         </div>
+
+
+                         <div class="lineasActuacion__section">
+                              {% if page.general-info-datosAbiertos-d1 %}
+                              <p class="lineasActuacion__sectionText">{{page.general-info-datosAbiertos-prev}}</p>
+                              <h2 class="cabiertas__subtitle">Actuación 1: Desarrollo API REST de Datos Reutilizable</h2>
+                              <p class="lineasActuacion__sectionText">{{page.general-info-datosAbiertos-d1}}</p>
+                              {% endif %} 
+                         </div>
+
+                         <div class="lineasActuacion__section">
+                              {% if page.general-info-datosAbiertos-d2 %}
+                              <h2 class="cabiertas__subtitle">Actuación 2: Despliegue del Portal Datos Abiertos de Santiago de Compostela</h2>
+                              <p class="lineasActuacion__sectionText">{{page.general-info-datosAbiertos-d2}}</p>
+                              {% endif %} 
+                         </div>
+
+                         <div class="lineasActuacion__section">
+                              {% if page.general-info-datosAbiertos-d3 %}
+                              <h2 class="cabiertas__subtitle">Actuación 3: Infraestructura Tecnológica para la Publicación de Datos Abiertos</h2>
+                              <p class="lineasActuacion__sectionText">{{page.general-info-datosAbiertos-d3}}</p>
+                              <p class="lineasActuacion__sectionText">{{page.general-info-datosAbiertos-d3-part2}}</p>
+                              {% endif %} 
+                         </div>
+                         
+                         <div class="lineasActuacion__section">
+                              {% if page.general-info-participacion-p1 %}
+                              <p class="lineasActuacion__sectionText">{{page.general-info-participacion-prev}}</p>
+                              <h2 class="cabiertas__subtitle">Actuación 1: Metodología para los Procesos Participativos</h2>
+                              <p class="lineasActuacion__sectionText">{{page.general-info-participacion-p1}}</p>
+                              {% endif %} 
+                         </div>
+                         
+                         <div class="lineasActuacion__section">
+                              {% if page.general-info-participacion-p2 %}
+                              <h2 class="cabiertas__subtitle">Actuación 2: Actuaciones sobre la Plataforma de Gobierno Abierto del Ayuntamiento de Zaragoza</h2>
+                              <p class="lineasActuacion__sectionText">{{page.general-info-participacion-p2}}</p>
+                              {% endif %}
+                         </div>
+                          
+                         <div class="lineasActuacion__section">
+                              {% if page.general-info-participacion-p3 %}
+                              <h2 class="cabiertas__subtitle">Actuación 3: Actuaciones sobre la Plataforma de Gobierno Abierto de los Ayuntamientos de Madrid, A Coruña y Santiago (Consul)</h2>
+                              <p class="lineasActuacion__sectionText">{{page.general-info-participacion-p3}}</p>
+                              {% endif %} 
+                         </div>
+                         
+                         <div class="lineasActuacion__section">
+                              {% if page.general-info-transparencia-t1 %}
+                              <p class="lineasActuacion__sectionText">{{page.general-info-transparencia-prev}}</p>
+                              <h2 class="cabiertas__subtitle">Actuación 1: Análisis para el Desarrollo e Implantación de un Portal de Transparencia tipo basado en Datos Abiertos</h2>
+                              <p class="lineasActuacion__sectionText">{{page.general-info-transparencia-t1}}</p>
+                              {% endif %}
+                         </div>
+                          
+                         <div class="lineasActuacion__section">
+                              {% if page.general-info-transparencia-t2 %}
+                              <h2 class="cabiertas__subtitle">Actuación 2: Elaboración Catálogo Común de Indicadores de Transparencia</h2>
+                              <p class="lineasActuacion__sectionText">{{page.general-info-transparencia-t2}}</p>
+                              {% endif %}
+                         </div>
+
+                         <div class="lineasActuacion__section">
+                              {% if page.general-info-transparencia-t3 %}
+                              <h2 class="cabiertas__subtitle">Actuación 3: Propuesta de Cuadro de Mando tipo para Transparencia</h2>
+                              <p class="lineasActuacion__sectionText">{{page.general-info-transparencia-t3}}</p>
+                              {% endif %}
+                         </div>
+
+                         <div class="lineasActuacion__section">
+                              {% if page.general-info-transparencia-t4 %}
+                              <h2 class="cabiertas__subtitle">Actuación 4: Visualizaciones</h2>
+                              <p class="lineasActuacion__sectionText">{{page.general-info-transparencia-t4}}</p>
+                              {% endif %}
+                         </div>
+
+                         <div class="lineasActuacion__section">
+                              {% if page.general-info-transparencia-t5 %}
+                              <h2 class="cabiertas__subtitle">Actuación 5: Organización de Talleres Colaborativos para el desarrollo de Visualizaciones</h2>
+                              <p class="lineasActuacion__sectionText">{{page.general-info-transparencia-t5}}</p>
+                              {% endif %}
+                         </div>
+                         
+                         <h2 class="cabiertas__title">Qué buscamos</h2>
+
+                         <div class="lineasActuacion__section">
+                              {% if page.general-info-enum %}
+                              <p class="lineasActuacion__sectionText">
+                              {% if page.general-info-enum-prev %}
+                              {{page.general-info-enum-prev}}
+                              {% endif %}
+                              <ul class="cabiertas__list">{{page.general-info-enum}}</ul>
+                              </p>
+                           {% endif %}
+                         </div>
+                        
+                        </div>
+
+                        
+                        <div id="tabPanel6" role="tabPanel" aria-labelledby="tab6-label" class="tabs__panel__item js-tabs-panel-item">
+                         <div class="lineasActuacion__publications">
+                              <h4 class="lineasActuacion__sectionTitle">{{page.catalogo-title1}}</h4>
+                              {% if page.table-vocabulario %}
+                              {{page.general-info-table-pre}}
+                              
+                              <table>
+                                <caption hidden="true">catalogo de vocabularios</caption>
+                                    <thead>
+                                    <th>Vocabulario</th>
+                                    <th>Prefijo</th>
+                                    <th>Serialización</th>
+                                    <th>Licencia</th>
+                                    <th>Idioma</th>
+                                    <th>Dominio</th>
+                                    <th>Enlaces</th>
+                                    <th>Descripción</th>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                        <td><a class="link" href="http://vocab.ciudadesabiertas.es/def/comercio/tejido-comercial" target="_blank">{{page.table-vocabulario}}</a></td>
+                                        <td>
+                                        <label>escom</label>
+                                        </td>
+                                        <td nowrap>
+                                         <p class="link"><a href="#" target="_blank"><label class="highlight">rdf+xml</label></a></p>
+                                         <p class="link"><a href="#" target="_blank"><label class="highlight">html</label></a></p>
+                                         <p class="link"><a href="#" target="_blank"><label class="highlight">turtle</label></a></p>  
+                                        </td>
+                                        <td nowrap><p class="link"><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"> <label class="highlight link">CC-BY</label></a></p>
+                                        </td>
+                                        <td nowrap>
+                                        <p class="link"><a href="http://www.lexvo.org/page/iso639-3/spa" target="_blank"><label class="highlight link">es</label></a></p>
+                                        <p class="link"><a href="http://www.lexvo.org/page/iso639-3/eng" target="_blank"><label class="highlight link">en</label></a></p>
+                                        </td>
+                                        <td nowrap>
+                                        <p class="link"><label class="highlight"> comercio</label></p>
+                                        <p class="link"><label class="highlight"> tejido comercial</label></p>
+                                        </td>
+                                        <td nowrap>
+                                        <p class="enlaces"><img src="/assets/img/octicons/repo.svg" class="icon"></img><a href="https://github.com/CiudadesAbiertas/vocab-comercio-censo-locales" target="_blank">repositorio </a></p>
+                                        <p class="enlaces"><img src="/assets/img/octicons/issue-opened.svg" class="icon"></img><a href="https://github.com/CiudadesAbiertas/vocab-comercio-censo-locales/wiki/Gesti%C3%B3n-de-issues" target="_blank">issues</a></p>
+                                        <p class="enlaces"><img src="/assets/img/octicons/tasklist.svg" class="icon-tasklist"></img><a href="https://github.com/CiudadesAbiertas/vocab-comercio-censo-locales/blob/master/requirements/Requisitos-Censo%20de%20locales%2C%20terrazas%2C%20licencias%20de%20actividades%20.xlsx" target="_blank">requisitos </a></p>
+                                        <p class="enlaces"><img src="/assets/img/octicons/tag.svg" class="icon"></img><a href="https://github.com/CiudadesAbiertas/vocab-comercio-censo-locales/releases" target="_blank">releases</a></p>
+                                        </td>
+                                        <td>
+                                     
+                                        {{page.table-description}}
+                                        <!--{{page.table-description-hidden}}
+                                        <a href="#3a" id="toggle">Leer más...</a>
+                                        -->
+                                           
+                                        </td>
+                                        </tr>
+
+
+
+
+                                    </tbody>
+
+                                </table>
+                              {% endif %}
+
+                         </div>
+                        </div>
+                        <!--<script>
+                        $(document).ready(function() {
+                        $("#toggle").click(function() {
+                            var elem = $("#toggle").text();
+                            
+                            if (elem == "Leer más...") {
+                            //Stuff to do when btn is in the read more state
+                            $("#toggle").text("Leer menos...");
+                            $("#collapse-text").slideDown();
+                            } else {
+                            //Stuff to do when btn is in the read less state
+                            $("#toggle").text("Leer más...");
+                            $("#collapse-text").slideUp();
+                            }
+                        });
+                        });
+                        </script>-->
+
+
+                    </div>    
+                </div>
+                         
+                </div>   
+                      
+                </div>
+               </div>
+          </div>
+     </div>
+</div>
+
+{{content}}

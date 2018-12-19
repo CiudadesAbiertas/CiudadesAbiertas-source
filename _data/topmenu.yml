@@ -1,0 +1,24 @@
+- title: Datos abiertos
+  url: /datos-abiertos/
+  code: abiertos
+  active: 1
+
+- title: Vocabularios
+  url: /vocabularios/
+  code: vocabularios
+  active: 1
+
+- title: Participaci&oacute;n
+  url: /participacion/
+  code: participacion
+  active: 1
+
+- title: Transparencia
+  url: /tranparencia/
+  code: tranparencia
+  active: 1
+
+- title: Contacto
+  url: /contacto/
+  code: contacto
+  active: 1

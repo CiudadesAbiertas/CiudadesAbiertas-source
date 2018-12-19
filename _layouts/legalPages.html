@@ -1,0 +1,104 @@
+--- 
+layout: default
+---
+
+{% comment %}
+Copyright 2018 Ayuntamiento de A Coruña, Ayuntamiento de Madrid, Ayuntamiento de Santiago de Compostela, Ayuntamiento de Zaragoza, Entidad Pública Empresarial Red.es
+ 
+  This file is part of "Ciudades Abiertas website".
+ 
+  Licensed under the EUPL, Version 1.2 or – as soon they will be approved by the European Commission - subsequent versions of the EUPL (the "Licence");
+  You may not use this work except in compliance with the Licence.
+  You may obtain a copy of the Licence at:
+ 
+  https://joinup.ec.europa.eu/software/page/eupl
+ 
+  Unless required by applicable law or agreed to in writing, software distributed under the Licence is distributed on an "AS IS" basis,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the Licence for the specific language governing permissions and limitations under the Licence.
+
+
+{% endcomment %} 
+
+<div class="legalPages">
+    <div class="legalPages__header-img"></div>
+     <div class="legalPages__content">
+          <h2 class="cabiertas__sectionSubTitle">{{ page.title }}</h2>
+
+          <div class="legalPages__section">
+                <h2 class="cabiertas__title"></h2>
+                <p class="legalPages__sectionText"></p>
+           </div>
+
+           <div class="legalPages__section">
+                {% if page.accesibility-info %}
+                <p class="legalPages__sectionText">{{page.accesibility-info}}</p>
+                {% endif %} 
+           </div>
+
+          <div class="legalPages__section">
+               {% if page.con-general %}
+               <h2 class="cabiertas__title">Condiciones generales de utilización de la página web</h2>
+               <p class="legalPages__sectionText">{{page.con-general}}</p>
+               {% endif %} 
+          </div>
+          
+          <div class="legalPages__section">   
+                {% if page.intellectual-property-logos %}
+                <h2 class="cabiertas__title">Propiedad intelectual e industrial sobre los contenidos de la página</h2>
+                <h2 class="cabiertas__subtitle">Diseño y logos</h2>
+               <p class="legalPages__sectionText">{{page.intellectual-property-logos}}</p>
+               {% endif %} 
+
+               {% if page.intellectual-property-contenidos %}
+                <h2 class="cabiertas__subtitle">Contenidos</h2>
+               <p class="legalPages__sectionText">{{page.intellectual-property-contenidos}}</p>
+               <ul class="cabiertas__list">{{page.intellectual-property-contenidos-enum}}</ul>
+
+               {% endif %}
+
+               {% if page.intellectual-property-disposiciones %}
+               <p class="legalPages__sectionText">
+               <h2 class="cabiertas__title">Disposiciones comunes</h2>
+               <p class="legalPages__sectionText">{{page.intellectual-property-disposiciones}}</p>
+                </p> 
+               {% endif %}
+          </div>
+
+          <div class="legalPages__section">
+               {% if page.datos-personal %}
+               <h2 class="cabiertas__title">Protección de datos de carácter personal</h2>
+               <p class="legalPages__sectionText">{{page.datos-personal}}</p>
+               {% endif %} 
+          </div>
+
+          <div class="legalPages__section">
+               {% if page.cookies %}
+               <h2 class="cabiertas__title">Cookies</h2>
+               <p class="legalPages__sectionText">{{page.cookies}}</p>
+               {% endif %} 
+          </div>
+
+          <div class="legalPages__section">
+            {% if page.modificaciones %}
+            <h2 class="cabiertas__title">Modificaciones</h2>
+            <p class="legalPages__sectionText">{{page.modificaciones}}</p>
+            {% endif %} 
+          </div>
+
+          <div class="legalPages__section">
+            {% if page.responsabilidad %}
+            <h2 class="cabiertas__title">Exclusion de responsabilidad</h2>
+            <p class="legalPages__sectionText">{{page.responsabilidad}}</p>
+            {% endif %} 
+          </div>
+
+          <div class="legalPages__section">
+            {% if page.hiperenlaces %}
+            <h2 class="cabiertas__title">Hiperenlaces</h2>
+            <p class="legalPages__sectionText">{{page.hiperenlaces}}</p>
+            {% endif %} 
+          </div>
+        
+     </div>
+</div>

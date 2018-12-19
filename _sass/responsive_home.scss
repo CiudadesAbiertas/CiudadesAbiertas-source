@@ -1,0 +1,76 @@
+/* ------- IE BROWSER CSS CODE ------- */
+
+/*HOME*/
+
+.clear {
+    clear: both;
+  }
+  
+  .home-header__right-info img {
+    float: right;
+    max-width: 500px;
+  }
+  
+  .home {
+    .home-header__content, .home-documentation__content {
+      display: block;
+    }
+  }
+  
+  .home-header__left-info, .home-documentation__left-info {
+    float: left;
+  }
+  
+  .home-header__right-info {
+    float: right;
+  }
+  
+  .home-documentation__right-info {
+    float: right;
+    img {
+      float: right;
+      max-width: 380px;
+    }
+  }
+  
+  @media (min-width: 1024px) and (max-width: 1200px) {
+    .home-header__right-info {
+      max-width: 304px;
+      img {
+        max-width: 304px;
+      }
+    }
+    .home-documentation__right-info {
+      max-width: 324px;
+      img {
+        max-width: 324px;
+      }
+    }
+  }
+  
+  @media (min-width: 576px) and (max-width: 1023px) {
+    .home {
+      .home-header__left-info, .home-documentation__left-info {
+        max-width: inherit;
+        float: none;
+      }
+      .home-header__right-info {
+        float: none;
+        margin: 24px auto;
+        max-width: 304px;
+      }
+      .home-documentation__right-info {
+        float: none;
+        margin: 24px auto;
+        max-width: 220px;
+      }
+      .home-header__right-info img {
+        float: none;
+        max-width: 304px;
+      }
+      .home-documentation__right-info img {
+        float: none;
+        max-width: 220px;
+      }
+    }
+  }

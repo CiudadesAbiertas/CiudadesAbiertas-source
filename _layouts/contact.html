@@ -1,0 +1,39 @@
+--- 
+layout: default
+---
+{% comment %}
+Copyright 2018 Ayuntamiento de A Coruña, Ayuntamiento de Madrid, Ayuntamiento de Santiago de Compostela, Ayuntamiento de Zaragoza, Entidad Pública Empresarial Red.es
+ 
+  This file is part of "Ciudades Abiertas website".
+ 
+  Licensed under the EUPL, Version 1.2 or – as soon they will be approved by the European Commission - subsequent versions of the EUPL (the "Licence");
+  You may not use this work except in compliance with the Licence.
+  You may obtain a copy of the Licence at:
+ 
+  https://joinup.ec.europa.eu/software/page/eupl
+ 
+  Unless required by applicable law or agreed to in writing, software distributed under the Licence is distributed on an "AS IS" basis,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the Licence for the specific language governing permissions and limitations under the Licence.
+
+
+{% endcomment %} 
+
+<div class="contact">
+     <div class="contact__header-img"></div>
+     <div class="contact__content">
+          <h2 class="contact__title">Contacta con nosotros</h2>
+          <div>
+               <div class="contact__item">
+                    <img class="contact__item__icon" src="../../assets/img/cabiertas/email-icon.svg" alt="Email de contacto">
+                    <span class="contact__item__label">Email:</span>
+                    <span class="contact__item__value"><a href="mailto:contacto@ciudadesabiertas.es">contacto@ciudadesabiertas.es</a></span>
+               </div>
+               
+          </div>
+          <div class="contact__text">
+                {{page.general-info}}
+                <ul class="cabiertas__list">{{page.general-info-enum}}</ul>
+          </div>
+     </div>
+</div>

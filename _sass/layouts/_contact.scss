@@ -1,0 +1,98 @@
+.contact{
+     position: relative;
+     padding: 0 100px 170px 100px;
+     &__header-img{
+          background-image: url('../../assets/img/cabiertas/grey.png');
+          position: absolute;
+          background-position: center;
+          left: 0;
+          width: 100%;
+          height: 164px;
+          background-size: cover;
+     }
+     &__content{
+          padding-top: 214px;
+          max-width: 1280px;
+          margin: auto;
+     }
+
+     &__title{
+          font-size: 2.143rem;
+          margin-bottom: 1.428rem;
+          &:after{
+               content: ' ';
+               width: 60px;
+               height: 5px;
+               display: block;
+               border-radius: 50px;
+               margin-top: 5px;
+               background-color: $dark-light;
+          }
+     }
+
+     &__item{
+          color: $dark-light;
+          display: inline-block;
+          &:first-child{
+               margin-right: 2.1428rem;
+          }
+          &__icon{
+               width: 16px;
+               vertical-align: middle;
+               
+          }
+
+          &__label{
+               font-weight: bold;
+               font-size: 1.143rem;
+               margin: 0 10px;
+               vertical-align: middle;
+     
+          }
+
+          &__value{
+               vertical-align: bottom;
+          }
+     }
+     &__text{
+          margin-top: 2.143rem;
+          color: $dark-light;
+          line-height: 25px;
+          &__paragraph{
+               margin-bottom: 1.428rem;
+          }
+     }
+}
+
+/* ---- Responsive ---- */
+
+@media (min-width: $sm-break) and (max-width: $md-break){
+     .contact {
+          padding: 0 20px 90px 20px;
+     }
+}
+
+@media screen and (max-width: $sm-break){
+     .contact{
+          padding: 0 15px 150px 15px;
+     }
+}
+
+
+@media screen and (max-width: $xs-break){
+     .contact{
+          &__content{
+               padding-top: 145px;
+          }
+          &__header-img{
+               height: 120px;
+               top: -3px;
+          }
+          &__item{
+               display: block;
+               &:first-child{
+                    margin-bottom: 20px;
+               }
+          }
+     }
+}
