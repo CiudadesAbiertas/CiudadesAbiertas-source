@@ -1,14 +1,14 @@
 ---
 #Copyright 2018 Ayuntamiento de A Coruña, Ayuntamiento de Madrid, Ayuntamiento de Santiago de Compostela, Ayuntamiento de Zaragoza, Entidad Pública Empresarial Red.es
-# 
+#
 #  This file is part of "Ciudades Abiertas website".
-# 
+#
 #  Licensed under the EUPL, Version 1.2 or – as soon they will be approved by the European Commission - subsequent versions of the EUPL (the "Licence");
 #  You may not use this work except in compliance with the Licence.
 #  You may obtain a copy of the Licence at:
-# 
+#
 #  https://joinup.ec.europa.eu/software/page/eupl
-# 
+#
 #  Unless required by applicable law or agreed to in writing, software distributed under the Licence is distributed on an "AS IS" basis,
 #  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 #  See the Licence for the specific language governing permissions and limitations under the Licence.
@@ -41,13 +41,21 @@ general-info-vocabulario-v1: "<p class=\"cabiertas__text\">El objetivo de esta a
 general-info-enum: "
 <li>Publicar nuevos vocabularios que en la actualidad no cuenten con un estándar definido.</li>
 
-<li>Incluir documentación y ejemplos para la rápida comprensión y replicación del vocabulario.</li> 
+<li>Incluir documentación y ejemplos para la rápida comprensión y replicación del vocabulario.</li>
 
 <li>Publicar un catálogo de vocabularios ya implementados que sirvan de referencia para otras entidades.</li>
 
 "
 
-general-info-table-pre: "<p class=\"cabiertas__text\">A continuación se muestra el listado de vocabularios que se está creando dentro de la iniciativa de Ciudades Abiertas para su utilización por parte de los Ayuntamientos participantes y de cualquier otra entidad que los considere de utilidad.</p>"
+general-info-table-pre: "<p class=\"cabiertas__text\">A continuación se muestra el listado de vocabularios que se está creando dentro de la iniciativa de Ciudades Abiertas para su utilización por parte de los Ayuntamientos participantes y de cualquier otra entidad que los considere de utilidad.</p>
+                              <p class=\"cabiertas__text\">Adicionalmente se han elaborado en el marco del proyecto dos vídeos que ilustran tanto los beneficios de la utilización de vocabularios para la representación de datos abiertos como la metodología utilizada en el proyecto para la definición de los vocabularios. Se pueden consultar en los siguientes enlaces:</p>
+                              <p class=\"cabiertas__text\">
+                                <ul class=\"cabiertas__list\">
+                                	<li><a href=\"https://youtu.be/gU16Sd-TTyo\" target=\"_blank\">Ventajas del uso de vocabularios</a></li>
+                                	<li><a href=\"https://youtu.be/aFiYnxvHhLs\" target=\"_blank\">¿Qué son y cómo se generan los vocabularios?</a></li>
+                                </ul>
+                              </p>
+"
 
 table-vocabulario: "Vocabulario para la representación de datos sobre el censo de locales y terrazas, así como sus actividades económicas y licencias de apertura asociadas"
 
@@ -63,7 +71,7 @@ table-dominio: ""
 
 table-enlaces: ""
 
-table-description: "<p class=\"cabiertas__text__uncollapse-text\">	
+table-description: "<p class=\"cabiertas__text__uncollapse-text\">
 Vocabulario para la representación de datos sobre el censo de locales y terrazas, así como sus actividades económicas y licencias de apertura asociadas. Esta versión ha sido generada dentro del contexto del proyecto \"Plataforma de gobierno abierto, colaborativa e interoperable\" en el que participan los ayuntamientos de A Coruña, Madrid, Santiago de Compostela y Zaragoza.</p>"
 
 table-description-hidden: "<p id=\"collapse-text\" class=\"cabiertas__text__collapse-text\">

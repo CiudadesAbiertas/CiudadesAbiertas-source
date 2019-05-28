@@ -1,23 +1,23 @@
---- 
-layout: default 
+---
+layout: default
 ---
 {% comment %}
 Copyright 2018 Ayuntamiento de A Coruña, Ayuntamiento de Madrid, Ayuntamiento de Santiago de Compostela, Ayuntamiento de Zaragoza, Entidad Pública Empresarial Red.es
- 
+
   This file is part of "Ciudades Abiertas website".
- 
+
   Licensed under the EUPL, Version 1.2 or – as soon they will be approved by the European Commission - subsequent versions of the EUPL (the "Licence");
   You may not use this work except in compliance with the Licence.
   You may obtain a copy of the Licence at:
- 
+
   https://joinup.ec.europa.eu/software/page/eupl
- 
+
   Unless required by applicable law or agreed to in writing, software distributed under the Licence is distributed on an "AS IS" basis,
   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
   See the Licence for the specific language governing permissions and limitations under the Licence.
 
 
-{% endcomment %} 
+{% endcomment %}
 <div class="lineasActuacion">
      {% if page.class-img %}
      <div class="lineasActuacion__header-img {{page.class-img}}"></div>
@@ -55,7 +55,7 @@ Copyright 2018 Ayuntamiento de A Coruña, Ayuntamiento de Madrid, Ayuntamiento d
                          <!--<h2 class="cabiertas__title">GENERAL</h2>-->
                          <p class="lineasActuacion__sectionText">{{page.general-info}}</p>
                          {% endif %}
-                            
+
                          <div class="lineasActuacion__section">
                               {% if page.general-info-objetivos %}
                               <h2 class="cabiertas__title">Objetivos</h2>
@@ -64,15 +64,15 @@ Copyright 2018 Ayuntamiento de A Coruña, Ayuntamiento de Madrid, Ayuntamiento d
                          </div>
 
                          <h2 class="cabiertas__title">Actuaciones</h2>
-                         
+
                          <div class="lineasActuacion__section">
                               {% if page.general-info-vocabulario-v1 %}
                               <p class="lineasActuacion__sectionText">{{page.general-info-vocabulario-prev}}</p>
                               <h2 class="cabiertas__subtitle">Actuación 1: Desarrollo de Vocabularios y Estructuras de Datos</h2>
-                              
+
                               <p class="lineasActuacion__sectionText">{{page.general-info-vocabulario-v1}}</p>
-                              
-                              {% endif %} 
+
+                              {% endif %}
                          </div>
 
 
@@ -81,14 +81,14 @@ Copyright 2018 Ayuntamiento de A Coruña, Ayuntamiento de Madrid, Ayuntamiento d
                               <p class="lineasActuacion__sectionText">{{page.general-info-datosAbiertos-prev}}</p>
                               <h2 class="cabiertas__subtitle">Actuación 1: Desarrollo API REST de Datos Reutilizable</h2>
                               <p class="lineasActuacion__sectionText">{{page.general-info-datosAbiertos-d1}}</p>
-                              {% endif %} 
+                              {% endif %}
                          </div>
 
                          <div class="lineasActuacion__section">
                               {% if page.general-info-datosAbiertos-d2 %}
                               <h2 class="cabiertas__subtitle">Actuación 2: Despliegue del Portal Datos Abiertos de Santiago de Compostela</h2>
                               <p class="lineasActuacion__sectionText">{{page.general-info-datosAbiertos-d2}}</p>
-                              {% endif %} 
+                              {% endif %}
                          </div>
 
                          <div class="lineasActuacion__section">
@@ -96,31 +96,31 @@ Copyright 2018 Ayuntamiento de A Coruña, Ayuntamiento de Madrid, Ayuntamiento d
                               <h2 class="cabiertas__subtitle">Actuación 3: Infraestructura Tecnológica para la Publicación de Datos Abiertos</h2>
                               <p class="lineasActuacion__sectionText">{{page.general-info-datosAbiertos-d3}}</p>
                               <p class="lineasActuacion__sectionText">{{page.general-info-datosAbiertos-d3-part2}}</p>
-                              {% endif %} 
+                              {% endif %}
                          </div>
-                         
+
                          <div class="lineasActuacion__section">
                               {% if page.general-info-participacion-p1 %}
                               <p class="lineasActuacion__sectionText">{{page.general-info-participacion-prev}}</p>
                               <h2 class="cabiertas__subtitle">Actuación 1: Metodología para los Procesos Participativos</h2>
                               <p class="lineasActuacion__sectionText">{{page.general-info-participacion-p1}}</p>
-                              {% endif %} 
+                              {% endif %}
                          </div>
-                         
+
                          <div class="lineasActuacion__section">
                               {% if page.general-info-participacion-p2 %}
                               <h2 class="cabiertas__subtitle">Actuación 2: Actuaciones sobre la Plataforma de Gobierno Abierto del Ayuntamiento de Zaragoza</h2>
                               <p class="lineasActuacion__sectionText">{{page.general-info-participacion-p2}}</p>
                               {% endif %}
                          </div>
-                          
+
                          <div class="lineasActuacion__section">
                               {% if page.general-info-participacion-p3 %}
                               <h2 class="cabiertas__subtitle">Actuación 3: Actuaciones sobre la Plataforma de Gobierno Abierto de los Ayuntamientos de Madrid, A Coruña y Santiago (Consul)</h2>
                               <p class="lineasActuacion__sectionText">{{page.general-info-participacion-p3}}</p>
-                              {% endif %} 
+                              {% endif %}
                          </div>
-                         
+
                          <div class="lineasActuacion__section">
                               {% if page.general-info-transparencia-t1 %}
                               <p class="lineasActuacion__sectionText">{{page.general-info-transparencia-prev}}</p>
@@ -128,7 +128,7 @@ Copyright 2018 Ayuntamiento de A Coruña, Ayuntamiento de Madrid, Ayuntamiento d
                               <p class="lineasActuacion__sectionText">{{page.general-info-transparencia-t1}}</p>
                               {% endif %}
                          </div>
-                          
+
                          <div class="lineasActuacion__section">
                               {% if page.general-info-transparencia-t2 %}
                               <h2 class="cabiertas__subtitle">Actuación 2: Elaboración Catálogo Común de Indicadores de Transparencia</h2>
@@ -156,7 +156,7 @@ Copyright 2018 Ayuntamiento de A Coruña, Ayuntamiento de Madrid, Ayuntamiento d
                               <p class="lineasActuacion__sectionText">{{page.general-info-transparencia-t5}}</p>
                               {% endif %}
                          </div>
-                         
+
                          <h2 class="cabiertas__title">Qué buscamos</h2>
 
                          <div class="lineasActuacion__section">
@@ -169,16 +169,16 @@ Copyright 2018 Ayuntamiento de A Coruña, Ayuntamiento de Madrid, Ayuntamiento d
                               </p>
                            {% endif %}
                          </div>
-                        
+
                         </div>
 
-                        
+
                         <div id="tabPanel6" role="tabPanel" aria-labelledby="tab6-label" class="tabs__panel__item js-tabs-panel-item">
                          <div class="lineasActuacion__publications">
                               <h4 class="lineasActuacion__sectionTitle">{{page.catalogo-title1}}</h4>
                               {% if page.table-vocabulario %}
                               {{page.general-info-table-pre}}
-                              
+
                               <table>
                                 <caption hidden="true">catalogo de vocabularios</caption>
                                     <thead>
@@ -200,7 +200,7 @@ Copyright 2018 Ayuntamiento de A Coruña, Ayuntamiento de Madrid, Ayuntamiento d
                                         <td nowrap>
                                          <p class="link"><a href="#" target="_blank"><label class="highlight">rdf+xml</label></a></p>
                                          <p class="link"><a href="#" target="_blank"><label class="highlight">html</label></a></p>
-                                         <p class="link"><a href="#" target="_blank"><label class="highlight">turtle</label></a></p>  
+                                         <p class="link"><a href="#" target="_blank"><label class="highlight">turtle</label></a></p>
                                         </td>
                                         <td nowrap><p class="link"><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"> <label class="highlight link">CC-BY</label></a></p>
                                         </td>
@@ -217,14 +217,15 @@ Copyright 2018 Ayuntamiento de A Coruña, Ayuntamiento de Madrid, Ayuntamiento d
                                         <p class="enlaces"><img src="/assets/img/octicons/issue-opened.svg" class="icon"></img><a href="https://github.com/CiudadesAbiertas/vocab-comercio-censo-locales/wiki/Gesti%C3%B3n-de-issues" target="_blank">issues</a></p>
                                         <p class="enlaces"><img src="/assets/img/octicons/tasklist.svg" class="icon-tasklist"></img><a href="https://github.com/CiudadesAbiertas/vocab-comercio-censo-locales/blob/master/requirements/Requisitos-Censo%20de%20locales%2C%20terrazas%2C%20licencias%20de%20actividades%20.xlsx" target="_blank">requisitos </a></p>
                                         <p class="enlaces"><img src="/assets/img/octicons/tag.svg" class="icon"></img><a href="https://github.com/CiudadesAbiertas/vocab-comercio-censo-locales/releases" target="_blank">releases</a></p>
+                                        <p class="enlaces"><img src="/assets/img/octicons/play.svg" class="icon"></img><a href="https://youtu.be/LCgEPuI8KD8" target="_blank">webinar</a></p>
                                         </td>
                                         <td>
-                                     
+
                                         {{page.table-description}}
                                         <!--{{page.table-description-hidden}}
                                         <a href="#3a" id="toggle">Leer más...</a>
                                         -->
-                                           
+
                                         </td>
                                         </tr>
 
@@ -242,7 +243,7 @@ Copyright 2018 Ayuntamiento de A Coruña, Ayuntamiento de Madrid, Ayuntamiento d
                         $(document).ready(function() {
                         $("#toggle").click(function() {
                             var elem = $("#toggle").text();
-                            
+
                             if (elem == "Leer más...") {
                             //Stuff to do when btn is in the read more state
                             $("#toggle").text("Leer menos...");
@@ -257,11 +258,11 @@ Copyright 2018 Ayuntamiento de A Coruña, Ayuntamiento de Madrid, Ayuntamiento d
                         </script>-->
 
 
-                    </div>    
+                    </div>
                 </div>
-                         
-                </div>   
-                      
+
+                </div>
+
                 </div>
                </div>
           </div>
