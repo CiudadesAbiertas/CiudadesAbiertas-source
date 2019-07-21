@@ -30,12 +30,11 @@ general-info: "<p class=\"cabiertas__text\">Las diversas actuaciones llevadas a 
 
 general-info-objetivos: "<p class=\"cabiertas__text\">El objetivo de esta actuación es la publicación de un catálogo de vocabularios bien definidos, documentados, con ejemplos de utilización y disponibles en varios lenguajes de representación.</p>"
 
-general-info-vocabulario-prev: "<p class=\"cabiertas__text\">Dentro de la línea de actuación de Vocabularios se desarrolla la siguiente actuación concreta dentro del proyecto.</p>"
+general-info-prev: "<p class=\"cabiertas__text\">Dentro de la línea de actuación de Vocabularios se desarrolla la siguiente actuación concreta dentro del proyecto.</p>"
 
-general-info-vocabulario-v1: "<p class=\"cabiertas__text\">El objetivo de esta actuación es el desarrollo de 11 vocabularios correspondientes a una serie de conjuntos de datos seleccionados por los Ayuntamientos.</p>
-
+general-info-actuacion1-titulo: "Desarrollo de Vocabularios y Estructuras de Datos"
+general-info-actuacion1-descripcion: "<p class=\"cabiertas__text\">El objetivo de esta actuación es el desarrollo de 11 vocabularios correspondientes a una serie de conjuntos de datos seleccionados por los Ayuntamientos.</p>
 <p class=\"cabiertas__text\">El proceso seguido para su desarrollo es el siguiente: por cada vocabulario primero se realiza un estudio del estado del arte, en el que se analizan los vocabularios existentes y en uso relacionados con el área de dominio seleccionada. Posteriormente se definen las historias de usuario para el uso de los datos (utilizando la técnica de creación de cuestiones de competencia, asociadas al uso potencial identificado para cada conjunto de datos seleccionado). Finalmente, los vocabularios son generados utilizando el lenguaje estándar OWL. También se dispone de los correspondientes contextos para JSON-LD, N-triples, TTL y RDF/XML.</p>
-
 <p class=\"cabiertas__text\">Para cada vocabulario también se incluye documentación y ejemplos de uso, y tareas de difusión y capacitación para facilitar la replicación del vocabulario. Esta documentación, entre otras cosas, mostrará cómo las historias de usuario se pueden resolver con el vocabulario.</p>"
 
 general-info-enum: "

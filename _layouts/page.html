@@ -41,8 +41,25 @@ Copyright 2018 Ayuntamiento de A Coruña, Ayuntamiento de Madrid, Ayuntamiento d
                          </li>
                          {% if page.class-threeTabs-vocabulario %}
                          <li class="tabs__list__item js-tablist-item {{page.class-color}} {{class-threeTabs}}">
-                              <a href="#" title="Catálogo" class="tabs__list__link js-tablist-link" id="tab6-label" role="tab" aria-controls="tabPanel6">
+                              <a href="#" title="Catálogo" class="tabs__list__link js-tablist-link" id="tab2-label" role="tab" aria-controls="tabPanel2">
                                    <h3 class="tabs__list__title">Catálogo de Vocabularios</h3>
+                              </a>
+                         </li>
+                         <li class="tabs__list__item js-tablist-item {{page.class-color}} {{class-threeTabs}}">
+                              <a href="#" title="SKOS" class="tabs__list__link js-tablist-link" id="tab3-label" role="tab" aria-controls="tabPanel3">
+                                   <h3 class="tabs__list__title">Catálogo de listas SKOS</h3>
+                              </a>
+                         </li>
+                         <li class="tabs__list__item js-tablist-item {{page.class-color}} {{class-threeTabs}}">
+                              <a href="#" title="Catálogo" class="tabs__list__link js-tablist-link" id="tab4-label" role="tab" aria-controls="tabPanel4">
+                                   <h3 class="tabs__list__title">Vocabularios Reutilizados</h3>
+                              </a>
+                         </li>
+                         {% endif %}
+                         {% if page.class-threeTabs-datosAbiertos %}
+                         <li class="tabs__list__item js-tablist-item {{page.class-color}} {{class-threeTabs}}">
+                              <a href="#" title="Portal Datos Abiertos" class="tabs__list__link js-tablist-link" id="tab2-label" role="tab" aria-controls="tabPanel2">
+                                   <h3 class="tabs__list__title">Portal Datos Abiertos</h3>
                               </a>
                          </li>
                          {% endif %}
@@ -59,128 +76,531 @@ Copyright 2018 Ayuntamiento de A Coruña, Ayuntamiento de Madrid, Ayuntamiento d
                          <div class="lineasActuacion__section">
                               {% if page.general-info-objetivos %}
                               <h2 class="cabiertas__title">Objetivos</h2>
-                              <p class="lineasActuacion__sectionText">{{page.general-info-objetivos}}</p>
+                              {{page.general-info-objetivos}}
                               {% endif %}
                          </div>
 
                          <h2 class="cabiertas__title">Actuaciones</h2>
 
-                         <div class="lineasActuacion__section">
-                              {% if page.general-info-vocabulario-v1 %}
-                              <p class="lineasActuacion__sectionText">{{page.general-info-vocabulario-prev}}</p>
-                              <h2 class="cabiertas__subtitle">Actuación 1: Desarrollo de Vocabularios y Estructuras de Datos</h2>
+                         {% if page.general-info-prev %}
+                             {{page.general-info-prev}}
+                         {% endif %}
 
-                              <p class="lineasActuacion__sectionText">{{page.general-info-vocabulario-v1}}</p>
+                         {% if page.general-info-actuacion1-titulo %}
+                           <ol class="lista__custom">
+                             <li class="list__element__numbered">
+                               <div class="lineasActuacion__section">
+                                 <h2 class="cabiertas__subtitle">{{page.general-info-actuacion1-titulo}}</h2>
+                                 {{page.general-info-actuacion1-descripcion}}
+                               </div>
+                             </li>
 
-                              {% endif %}
-                         </div>
+                           {% if page.general-info-actuacion2-titulo %}
+                             <li class="list__element__numbered">
+                               <div class="lineasActuacion__section">
+                                 <h2 class="cabiertas__subtitle">{{page.general-info-actuacion2-titulo}}</h2>
+                                 {{page.general-info-actuacion2-descripcion}}
+                               </div>
+                             </li>
+                           {% endif %}
 
+                           {% if page.general-info-actuacion3-titulo %}
+                             <li class="list__element__numbered">
+                               <div class="lineasActuacion__section">
+                                 <h2 class="cabiertas__subtitle">{{page.general-info-actuacion3-titulo}}</h2>
+                                 {{page.general-info-actuacion3-descripcion}}
+                               </div>
+                             </li>
+                           {% endif %}
 
-                         <div class="lineasActuacion__section">
-                              {% if page.general-info-datosAbiertos-d1 %}
-                              <p class="lineasActuacion__sectionText">{{page.general-info-datosAbiertos-prev}}</p>
-                              <h2 class="cabiertas__subtitle">Actuación 1: Desarrollo API REST de Datos Reutilizable</h2>
-                              <p class="lineasActuacion__sectionText">{{page.general-info-datosAbiertos-d1}}</p>
-                              {% endif %}
-                         </div>
+                           {% if page.general-info-actuacion4-titulo %}
+                             <li class="list__element__numbered">
+                               <div class="lineasActuacion__section">
+                                 <h2 class="cabiertas__subtitle">{{page.general-info-actuacion4-titulo}}</h2>
+                                 {{page.general-info-actuacion4-descripcion}}
+                               </div>
+                             </li>
+                           {% endif %}
 
-                         <div class="lineasActuacion__section">
-                              {% if page.general-info-datosAbiertos-d2 %}
-                              <h2 class="cabiertas__subtitle">Actuación 2: Despliegue del Portal Datos Abiertos de Santiago de Compostela</h2>
-                              <p class="lineasActuacion__sectionText">{{page.general-info-datosAbiertos-d2}}</p>
-                              {% endif %}
-                         </div>
+                           {% if page.general-info-actuacion5-titulo %}
+                             <li class="list__element__numbered">
+                               <div class="lineasActuacion__section">
+                                 <h2 class="cabiertas__subtitle">{{page.general-info-actuacion5-titulo}}</h2>
+                                 {{page.general-info-actuacion5-descripcion}}
+                               </div>
+                             </li>
+                           {% endif %}
 
-                         <div class="lineasActuacion__section">
-                              {% if page.general-info-datosAbiertos-d3 %}
-                              <h2 class="cabiertas__subtitle">Actuación 3: Infraestructura Tecnológica para la Publicación de Datos Abiertos</h2>
-                              <p class="lineasActuacion__sectionText">{{page.general-info-datosAbiertos-d3}}</p>
-                              <p class="lineasActuacion__sectionText">{{page.general-info-datosAbiertos-d3-part2}}</p>
-                              {% endif %}
-                         </div>
-
-                         <div class="lineasActuacion__section">
-                              {% if page.general-info-participacion-p1 %}
-                              <p class="lineasActuacion__sectionText">{{page.general-info-participacion-prev}}</p>
-                              <h2 class="cabiertas__subtitle">Actuación 1: Metodología para los Procesos Participativos</h2>
-                              <p class="lineasActuacion__sectionText">{{page.general-info-participacion-p1}}</p>
-                              {% endif %}
-                         </div>
-
-                         <div class="lineasActuacion__section">
-                              {% if page.general-info-participacion-p2 %}
-                              <h2 class="cabiertas__subtitle">Actuación 2: Actuaciones sobre la Plataforma de Gobierno Abierto del Ayuntamiento de Zaragoza</h2>
-                              <p class="lineasActuacion__sectionText">{{page.general-info-participacion-p2}}</p>
-                              {% endif %}
-                         </div>
-
-                         <div class="lineasActuacion__section">
-                              {% if page.general-info-participacion-p3 %}
-                              <h2 class="cabiertas__subtitle">Actuación 3: Actuaciones sobre la Plataforma de Gobierno Abierto de los Ayuntamientos de Madrid, A Coruña y Santiago (Consul)</h2>
-                              <p class="lineasActuacion__sectionText">{{page.general-info-participacion-p3}}</p>
-                              {% endif %}
-                         </div>
-
-                         <div class="lineasActuacion__section">
-                              {% if page.general-info-transparencia-t1 %}
-                              <p class="lineasActuacion__sectionText">{{page.general-info-transparencia-prev}}</p>
-                              <h2 class="cabiertas__subtitle">Actuación 1: Análisis para el Desarrollo e Implantación de un Portal de Transparencia tipo basado en Datos Abiertos</h2>
-                              <p class="lineasActuacion__sectionText">{{page.general-info-transparencia-t1}}</p>
-                              {% endif %}
-                         </div>
-
-                         <div class="lineasActuacion__section">
-                              {% if page.general-info-transparencia-t2 %}
-                              <h2 class="cabiertas__subtitle">Actuación 2: Elaboración Catálogo Común de Indicadores de Transparencia</h2>
-                              <p class="lineasActuacion__sectionText">{{page.general-info-transparencia-t2}}</p>
-                              {% endif %}
-                         </div>
-
-                         <div class="lineasActuacion__section">
-                              {% if page.general-info-transparencia-t3 %}
-                              <h2 class="cabiertas__subtitle">Actuación 3: Propuesta de Cuadro de Mando tipo para Transparencia</h2>
-                              <p class="lineasActuacion__sectionText">{{page.general-info-transparencia-t3}}</p>
-                              {% endif %}
-                         </div>
-
-                         <div class="lineasActuacion__section">
-                              {% if page.general-info-transparencia-t4 %}
-                              <h2 class="cabiertas__subtitle">Actuación 4: Visualizaciones</h2>
-                              <p class="lineasActuacion__sectionText">{{page.general-info-transparencia-t4}}</p>
-                              {% endif %}
-                         </div>
-
-                         <div class="lineasActuacion__section">
-                              {% if page.general-info-transparencia-t5 %}
-                              <h2 class="cabiertas__subtitle">Actuación 5: Organización de Talleres Colaborativos para el desarrollo de Visualizaciones</h2>
-                              <p class="lineasActuacion__sectionText">{{page.general-info-transparencia-t5}}</p>
-                              {% endif %}
-                         </div>
+                           </ol>
+                         {% endif %}
 
                          <h2 class="cabiertas__title">Qué buscamos</h2>
 
                          <div class="lineasActuacion__section">
-                              {% if page.general-info-enum %}
-                              <p class="lineasActuacion__sectionText">
+                           {% if page.general-info-enum %}
                               {% if page.general-info-enum-prev %}
                               {{page.general-info-enum-prev}}
                               {% endif %}
                               <ul class="cabiertas__list">{{page.general-info-enum}}</ul>
-                              </p>
                            {% endif %}
                          </div>
 
                         </div>
 
 
-                        <div id="tabPanel6" role="tabPanel" aria-labelledby="tab6-label" class="tabs__panel__item js-tabs-panel-item">
+                        {% if page.class-threeTabs-vocabulario %}
+                      <div id="tabPanel2" role="tabPanel" aria-labelledby="tab2-label" class="tabs__panel__item js-tabs-panel-item">
                          <div class="lineasActuacion__publications">
-                              <h4 class="lineasActuacion__sectionTitle">{{page.catalogo-title1}}</h4>
-                              {% if page.table-vocabulario %}
-                              {{page.general-info-table-pre}}
+                              <p class="cabiertas__text">A continuación se muestra el listado de vocabularios que se está creando dentro de la iniciativa de Ciudades Abiertas para su utilización por parte de los Ayuntamientos participantes y de cualquier otra entidad que los considere de utilidad.</p>
+                              <p class="cabiertas__text">Adicionalmente se han elaborado en el marco del proyecto dos vídeos que ilustran tanto los beneficios de la utilización de vocabularios para la representación de datos abiertos como la metodología utilizada en el proyecto para la definición de los vocabularios. Se pueden consultar en los siguientes enlaces:</p>
+                              <ul class="cabiertas__list">
+                              	<li><a href="https://youtu.be/gU16Sd-TTyo" target="_blank">Ventajas del uso de vocabularios</a></li>
+                              	<li><a href="https://youtu.be/aFiYnxvHhLs" target="_blank">¿Qué son y cómo se generan los vocabularios?</a></li>
+                              </ul>
 
                               <table>
-                                <caption hidden="true">catalogo de vocabularios</caption>
+                                <caption hidden="true">Catálogo de vocabularios</caption>
+                                    <thead>
+                                    <th>Vocabulario</th>
+                                    <th>Fecha Publicación</th>
+                                    <th>Prefijo</th>
+                                    <th>Serialización</th>
+                                    <th>Licencia</th>
+                                    <th>Idioma</th>
+                                    <th>Dominio</th>
+                                    <th>Enlaces</th>
+                                    <th>Descripción</th>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><a class="link" href="http://vocab.ciudadesabiertas.es/def/comercio/tejido-comercial" target="_blank">Censo de locales y terrazas, así como sus actividades económicas y licencias de apertura asociadas</a></td>
+                                            <td>16/11/18</td>
+                                            <td><label>escom</label></td>
+                                            <td nowrap>
+                                              <p class="link"><a href="#" target="_blank"><label class="highlight">rdf+xml</label></a></p>
+                                              <p class="link"><a href="#" target="_blank"><label class="highlight">html</label></a></p>
+                                              <p class="link"><a href="#" target="_blank"><label class="highlight">turtle</label></a></p>
+                                            </td>
+                                            <td nowrap>
+                                              <p class="link"><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"> <label class="highlight link">CC-BY</label></a></p>
+                                            </td>
+                                            <td nowrap>
+                                              <p class="link"><a href="http://www.lexvo.org/page/iso639-3/spa" target="_blank"><label class="highlight link">es</label></a></p>
+                                              <p class="link"><a href="http://www.lexvo.org/page/iso639-3/eng" target="_blank"><label class="highlight link">en</label></a></p>
+                                            </td>
+                                            <td nowrap>
+                                              <p class="link"><label class="highlight">comercio</label></p>
+                                            </td>
+                                            <td nowrap>
+                                              <p class="enlaces"><img src="../assets/img/octicons/repo.svg" class="icon"></img><a href="https://github.com/CiudadesAbiertas/vocab-comercio-censo-locales" target="_blank">repositorio</a></p>
+                                              <p class="enlaces"><img src="../assets/img/octicons/issue-opened.svg" class="icon"></img><a href="https://github.com/CiudadesAbiertas/vocab-comercio-censo-locales/wiki/Gesti%C3%B3n-de-issues" target="_blank">issues</a></p>
+                                              <p class="enlaces"><img src="../assets/img/octicons/tasklist.svg" class="icon-tasklist"></img><a href="https://github.com/CiudadesAbiertas/vocab-comercio-censo-locales/blob/master/requirements/Requisitos-Censo%20de%20locales%2C%20terrazas%2C%20licencias%20de%20actividades%20.xlsx" target="_blank">requisitos</a></p>
+                                              <p class="enlaces"><img src="../assets/img/octicons/tag.svg" class="icon"></img><a href="https://github.com/CiudadesAbiertas/vocab-comercio-censo-locales/releases" target="_blank">releases</a></p>
+                                              <p class="enlaces"><img src="../assets/img/octicons/play.svg" class="icon"></img><a href="https://youtu.be/LCgEPuI8KD8" target="_blank">webinar</a></p>
+                                            </td>
+                                            <td>
+                                              <p class="cabiertas__text__uncollapse-text">Vocabulario para la representación de datos sobre el censo de locales y terrazas, así como sus actividades económicas y licencias de apertura asociadas. Esta versión ha sido generada dentro del contexto del proyecto "Plataforma de gobierno abierto, colaborativa e interoperable" en el que participan los ayuntamientos de A Coruña, Madrid, Santiago de Compostela y Zaragoza.</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><a class="link" href="https://github.com/CiudadesAbiertas/vocab-sector-publico-agenda-municipal/wiki" target="_blank">Agenda Municipal</a></td>
+                                            <td>En proceso</td>
+                                            <td><label>esagen</label></td>
+                                            <td nowrap>
+                                              <p class="link"><a href="#" target="_blank"><label class="highlight">rdf+xml</label></a></p>
+                                              <p class="link"><a href="#" target="_blank"><label class="highlight">html</label></a></p>
+                                              <p class="link"><a href="#" target="_blank"><label class="highlight">turtle</label></a></p>
+                                            </td>
+                                            <td nowrap>
+                                              <p class="link"><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"> <label class="highlight link">CC-BY</label></a></p>
+                                            </td>
+                                            <td nowrap>
+                                              <p class="link"><a href="http://www.lexvo.org/page/iso639-3/spa" target="_blank"><label class="highlight link">es</label></a></p>
+                                              <p class="link"><a href="http://www.lexvo.org/page/iso639-3/eng" target="_blank"><label class="highlight link">en</label></a></p>
+                                            </td>
+                                            <td nowrap>
+                                              <p class="link"><label class="highlight">sector-publico</label></p>
+                                            </td>
+                                            <td nowrap>
+                                              <p class="enlaces"><img src="../assets/img/octicons/repo.svg" class="icon"></img><a href="https://github.com/CiudadesAbiertas/vocab-sector-publico-agenda-municipal" target="_blank">repositorio</a></p>
+                                            </td>
+                                            <td>
+                                              <p class="cabiertas__text__uncollapse-text"></p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><a class="link" href="https://github.com/CiudadesAbiertas/vocab-demografia-padron-municipal/wiki" target="_blank">Padrón de Habitantes</a></td>
+                                            <td>En proceso</td>
+                                            <td><label>espad</label></td>
+                                            <td nowrap>
+                                              <p class="link"><a href="#" target="_blank"><label class="highlight">rdf+xml</label></a></p>
+                                              <p class="link"><a href="#" target="_blank"><label class="highlight">html</label></a></p>
+                                              <p class="link"><a href="#" target="_blank"><label class="highlight">turtle</label></a></p>
+                                            </td>
+                                            <td nowrap>
+                                              <p class="link"><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"> <label class="highlight link">CC-BY</label></a></p>
+                                            </td>
+                                            <td nowrap>
+                                              <p class="link"><a href="http://www.lexvo.org/page/iso639-3/spa" target="_blank"><label class="highlight link">es</label></a></p>
+                                              <p class="link"><a href="http://www.lexvo.org/page/iso639-3/eng" target="_blank"><label class="highlight link">en</label></a></p>
+                                            </td>
+                                            <td nowrap>
+                                              <p class="link"><label class="highlight">demografia</label></p>
+                                            </td>
+                                            <td nowrap>
+                                              <p class="enlaces"><img src="../assets/img/octicons/repo.svg" class="icon"></img><a href="https://github.com/CiudadesAbiertas/vocab-demografia-padron-municipal" target="_blank">repositorio</a></p>
+                                            </td>
+                                            <td>
+                                              <p class="cabiertas__text__uncollapse-text"></p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Bicicleta pública</td>
+                                            <td>En proceso</td>
+                                            <td><label>esbici</label></td>
+                                            <td nowrap>
+                                              <p class="link"><a href="#" target="_blank"><label class="highlight">rdf+xml</label></a></p>
+                                              <p class="link"><a href="#" target="_blank"><label class="highlight">html</label></a></p>
+                                              <p class="link"><a href="#" target="_blank"><label class="highlight">turtle</label></a></p>
+                                            </td>
+                                            <td nowrap>
+                                              <p class="link"><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"> <label class="highlight link">CC-BY</label></a></p>
+                                            </td>
+                                            <td nowrap>
+                                              <p class="link"><a href="http://www.lexvo.org/page/iso639-3/spa" target="_blank"><label class="highlight link">es</label></a></p>
+                                              <p class="link"><a href="http://www.lexvo.org/page/iso639-3/eng" target="_blank"><label class="highlight link">en</label></a></p>
+                                            </td>
+                                            <td nowrap>
+                                              <p class="link"><label class="highlight">transporte</label></p>
+                                            </td>
+                                            <td nowrap>
+                                            </td>
+                                            <td>
+                                              <p class="cabiertas__text__uncollapse-text"></p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Autobuses urbanos</td>
+                                            <td>En proceso</td>
+                                            <td><label>esautob</label></td>
+                                            <td nowrap>
+                                              <p class="link"><a href="#" target="_blank"><label class="highlight">rdf+xml</label></a></p>
+                                              <p class="link"><a href="#" target="_blank"><label class="highlight">html</label></a></p>
+                                              <p class="link"><a href="#" target="_blank"><label class="highlight">turtle</label></a></p>
+                                            </td>
+                                            <td nowrap>
+                                              <p class="link"><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"> <label class="highlight link">CC-BY</label></a></p>
+                                            </td>
+                                            <td nowrap>
+                                              <p class="link"><a href="http://www.lexvo.org/page/iso639-3/spa" target="_blank"><label class="highlight link">es</label></a></p>
+                                              <p class="link"><a href="http://www.lexvo.org/page/iso639-3/eng" target="_blank"><label class="highlight link">en</label></a></p>
+                                            </td>
+                                            <td nowrap>
+                                              <p class="link"><label class="highlight">transporte</label></p>
+                                            </td>
+                                            <td nowrap>
+                                            </td>
+                                            <td>
+                                              <p class="cabiertas__text__uncollapse-text"></p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><a class="link" href="https://github.com/CiudadesAbiertas/vocab-transporte-trafico/wiki" target="_blank">Tráfico</a></td>
+                                            <td>En proceso</td>
+                                            <td><label>estraf</label></td>
+                                            <td nowrap>
+                                              <p class="link"><a href="#" target="_blank"><label class="highlight">rdf+xml</label></a></p>
+                                              <p class="link"><a href="#" target="_blank"><label class="highlight">html</label></a></p>
+                                              <p class="link"><a href="#" target="_blank"><label class="highlight">turtle</label></a></p>
+                                            </td>
+                                            <td nowrap>
+                                              <p class="link"><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"> <label class="highlight link">CC-BY</label></a></p>
+                                            </td>
+                                            <td nowrap>
+                                              <p class="link"><a href="http://www.lexvo.org/page/iso639-3/spa" target="_blank"><label class="highlight link">es</label></a></p>
+                                              <p class="link"><a href="http://www.lexvo.org/page/iso639-3/eng" target="_blank"><label class="highlight link">en</label></a></p>
+                                            </td>
+                                            <td nowrap>
+                                              <p class="link"><label class="highlight">transporte</label></p>
+                                            </td>
+                                            <td nowrap>
+                                              <p class="enlaces"><img src="../assets/img/octicons/repo.svg" class="icon"></img><a href="https://github.com/CiudadesAbiertas/vocab-transporte-trafico" target="_blank">repositorio</a></p>
+                                            </td>
+                                            <td>
+                                              <p class="cabiertas__text__uncollapse-text"></p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Empleo</td>
+                                            <td>En proceso</td>
+                                            <td><label>esemp</label></td>
+                                            <td nowrap>
+                                              <p class="link"><a href="#" target="_blank"><label class="highlight">rdf+xml</label></a></p>
+                                              <p class="link"><a href="#" target="_blank"><label class="highlight">html</label></a></p>
+                                              <p class="link"><a href="#" target="_blank"><label class="highlight">turtle</label></a></p>
+                                            </td>
+                                            <td nowrap>
+                                              <p class="link"><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"> <label class="highlight link">CC-BY</label></a></p>
+                                            </td>
+                                            <td nowrap>
+                                              <p class="link"><a href="http://www.lexvo.org/page/iso639-3/spa" target="_blank"><label class="highlight link">es</label></a></p>
+                                              <p class="link"><a href="http://www.lexvo.org/page/iso639-3/eng" target="_blank"><label class="highlight link">en</label></a></p>
+                                            </td>
+                                            <td nowrap>
+                                              <p class="link"><label class="highlight">economia</label></p>
+                                            </td>
+                                            <td nowrap>
+                                            </td>
+                                            <td>
+                                              <p class="cabiertas__text__uncollapse-text"></p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><a class="link" href="https://github.com/CiudadesAbiertas/vocab-hacienda-presupuesto/wiki" target="_blank">Presupuesto y Ejecución Presupuestaria</a></td>
+                                            <td>En proceso</td>
+                                            <td><label>espresu</label></td>
+                                            <td nowrap>
+                                              <p class="link"><a href="#" target="_blank"><label class="highlight">rdf+xml</label></a></p>
+                                              <p class="link"><a href="#" target="_blank"><label class="highlight">html</label></a></p>
+                                              <p class="link"><a href="#" target="_blank"><label class="highlight">turtle</label></a></p>
+                                            </td>
+                                            <td nowrap>
+                                              <p class="link"><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"> <label class="highlight link">CC-BY</label></a></p>
+                                            </td>
+                                            <td nowrap>
+                                              <p class="link"><a href="http://www.lexvo.org/page/iso639-3/spa" target="_blank"><label class="highlight link">es</label></a></p>
+                                              <p class="link"><a href="http://www.lexvo.org/page/iso639-3/eng" target="_blank"><label class="highlight link">en</label></a></p>
+                                            </td>
+                                            <td nowrap>
+                                              <p class="link"><label class="highlight">hacienda</label></p>
+                                            </td>
+                                            <td nowrap>
+                                              <p class="enlaces"><img src="../assets/img/octicons/repo.svg" class="icon"></img><a href="https://github.com/CiudadesAbiertas/vocab-hacienda-presupuesto" target="_blank">repositorio</a></p>
+                                            </td>
+                                            <td>
+                                              <p class="cabiertas__text__uncollapse-text"></p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><a class="link" href="https://github.com/CiudadesAbiertas/vocab-sector-publico-convenios/wiki" target="_blank">Convenios</a></td>
+                                            <td>En proceso</td>
+                                            <td><label>escon</label></td>
+                                            <td nowrap>
+                                              <p class="link"><a href="#" target="_blank"><label class="highlight">rdf+xml</label></a></p>
+                                              <p class="link"><a href="#" target="_blank"><label class="highlight">html</label></a></p>
+                                              <p class="link"><a href="#" target="_blank"><label class="highlight">turtle</label></a></p>
+                                            </td>
+                                            <td nowrap>
+                                              <p class="link"><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"> <label class="highlight link">CC-BY</label></a></p>
+                                            </td>
+                                            <td nowrap>
+                                              <p class="link"><a href="http://www.lexvo.org/page/iso639-3/spa" target="_blank"><label class="highlight link">es</label></a></p>
+                                              <p class="link"><a href="http://www.lexvo.org/page/iso639-3/eng" target="_blank"><label class="highlight link">en</label></a></p>
+                                            </td>
+                                            <td nowrap>
+                                              <p class="link"><label class="highlight">sector-publico</label></p>
+                                            </td>
+                                            <td nowrap>
+                                              <p class="enlaces"><img src="../assets/img/octicons/repo.svg" class="icon"></img><a href="https://github.com/CiudadesAbiertas/vocab-sector-publico-convenios" target="_blank">repositorio</a></p>
+                                            </td>
+                                            <td>
+                                              <p class="cabiertas__text__uncollapse-text"></p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Contaminación Acústica</td>
+                                            <td>En proceso</td>
+                                            <td><label>noise</label></td>
+                                            <td nowrap>
+                                              <p class="link"><a href="#" target="_blank"><label class="highlight">rdf+xml</label></a></p>
+                                              <p class="link"><a href="#" target="_blank"><label class="highlight">html</label></a></p>
+                                              <p class="link"><a href="#" target="_blank"><label class="highlight">turtle</label></a></p>
+                                            </td>
+                                            <td nowrap>
+                                              <p class="link"><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"> <label class="highlight link">CC-BY</label></a></p>
+                                            </td>
+                                            <td nowrap>
+                                              <p class="link"><a href="http://www.lexvo.org/page/iso639-3/spa" target="_blank"><label class="highlight link">es</label></a></p>
+                                              <p class="link"><a href="http://www.lexvo.org/page/iso639-3/eng" target="_blank"><label class="highlight link">en</label></a></p>
+                                            </td>
+                                            <td nowrap>
+                                              <p class="link"><label class="highlight">medio-ambiente</label></p>
+                                            </td>
+                                            <td nowrap>
+                                            </td>
+                                            <td>
+                                              <p class="cabiertas__text__uncollapse-text"></p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><a class="link" href="https://github.com/CiudadesAbiertas/vocab-economia-deuda/wiki" target="_blank">Deuda Pública</a></td>
+                                            <td>En proceso</td>
+                                            <td><label>esdeuda</label></td>
+                                            <td nowrap>
+                                              <p class="link"><a href="#" target="_blank"><label class="highlight">rdf+xml</label></a></p>
+                                              <p class="link"><a href="#" target="_blank"><label class="highlight">html</label></a></p>
+                                              <p class="link"><a href="#" target="_blank"><label class="highlight">turtle</label></a></p>
+                                            </td>
+                                            <td nowrap>
+                                              <p class="link"><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"> <label class="highlight link">CC-BY</label></a></p>
+                                            </td>
+                                            <td nowrap>
+                                              <p class="link"><a href="http://www.lexvo.org/page/iso639-3/spa" target="_blank"><label class="highlight link">es</label></a></p>
+                                              <p class="link"><a href="http://www.lexvo.org/page/iso639-3/eng" target="_blank"><label class="highlight link">en</label></a></p>
+                                            </td>
+                                            <td nowrap>
+                                              <p class="link"><label class="highlight">economia</label></p>
+                                            </td>
+                                            <td nowrap>
+                                              <p class="enlaces"><img src="../assets/img/octicons/repo.svg" class="icon"></img><a href="https://github.com/CiudadesAbiertas/vocab-economia-deuda" target="_blank">repositorio</a></p>
+                                            </td>
+                                            <td>
+                                              <p class="cabiertas__text__uncollapse-text"></p>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                              </table>
+
+                         </div>
+                      </div>
+
+
+                      <div id="tabPanel3" role="tabPanel" aria-labelledby="tab3-label" class="tabs__panel__item js-tabs-panel-item">
+                         <div class="lineasActuacion__publications">
+                              <h4 class="lineasActuacion__sectionTitle"></h4>
+                              <p class="cabiertas__text">A continuación se muestran las listas <acronym title="Simple Knowledge Organization System">SKOS</acronym> que han sido generadas dentro de la iniciativa de Ciudades Abiertas para su utilización por parte de los Ayuntamientos participantes y de cualquier otra entidad que los considere de utilidad.</p>
+
+                              <table>
+                                <caption hidden="true">Catálogo de listas SKOS</caption>
+                                    <thead>
+                                    <th>Lista SKOS</th>
+                                    <th>Licencia</th>
+                                    <th>Idioma</th>
+                                    <th>Dominio</th>
+                                    <th>Vocabulario que las usa</th>
+                                    <th>Enlaces</th>
+                                    <th>Descripción</th>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><a class="link" href="http://vocab.linkeddata.es/datosabiertos/kos/comercio/periodo-funcionamiento" target="_blank">Periodo de funcionamiento</a></td>
+                                            <td nowrap>
+                                              <p class="link"><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"> <label class="highlight link">CC-BY</label></a></p>
+                                            </td>
+                                            <td nowrap>
+                                              <p class="link"><a href="http://www.lexvo.org/page/iso639-3/spa" target="_blank"><label class="highlight link">es</label></a></p>
+                                            </td>
+                                            <td nowrap>
+                                              <p class="link"><label class="highlight">comercio</label></p>
+                                            </td>
+                                            <td>
+                                              <p class="cabiertas__text__uncollapse-text">censo de locales comerciales</p>
+                                            </td>
+                                            <td nowrap>
+                                              <p class="enlaces"><img src="../assets/img/octicons/repo.svg" class="icon"></img><a href="https://github.com/opencitydata/listas-codigos-skos/blob/master/comercio/periodo-funcionamiento.ttl" target="_blank">repositorio</a></p>
+                                            </td>
+                                            <td>
+                                              <p class="cabiertas__text__uncollapse-text">Lista que recoge los tipos de periodos de funcionamiento de las terrazas</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><a class="link" href="http://vocab.linkeddata.es/datosabiertos/kos/comercio/tipo-situacion" target="_blank">Tipo de situación</a></td>
+                                            <td nowrap>
+                                              <p class="link"><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"> <label class="highlight link">CC-BY</label></a></p>
+                                            </td>
+                                            <td nowrap>
+                                              <p class="link"><a href="http://www.lexvo.org/page/iso639-3/spa" target="_blank"><label class="highlight link">es</label></a></p>
+                                            </td>
+                                            <td nowrap>
+                                              <p class="link"><label class="highlight">comercio</label></p>
+                                            </td>
+                                            <td>
+                                              <p class="cabiertas__text__uncollapse-text">censo de locales comerciales</p>
+                                            </td>
+                                            <td nowrap>
+                                              <p class="enlaces"><img src="../assets/img/octicons/repo.svg" class="icon"></img><a href="https://github.com/opencitydata/listas-codigos-skos/blob/master/comercio/tipo-situacion.ttl" target="_blank">repositorio</a></p>
+                                            </td>
+                                            <td>
+                                              <p class="cabiertas__text__uncollapse-text">Lista que recoge los tipos de situación en los que se puede encontrar un local comercial</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><a class="link" href="http://vocab.linkeddata.es/datosabiertos/kos/comercio/tipo-acceso" target="_blank">Tipo de acceso</a></td>
+                                            <td nowrap>
+                                              <p class="link"><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"> <label class="highlight link">CC-BY</label></a></p>
+                                            </td>
+                                            <td nowrap>
+                                              <p class="link"><a href="http://www.lexvo.org/page/iso639-3/spa" target="_blank"><label class="highlight link">es</label></a></p>
+                                            </td>
+                                            <td nowrap>
+                                              <p class="link"><label class="highlight">comercio</label></p>
+                                            </td>
+                                            <td>
+                                              <p class="cabiertas__text__uncollapse-text">censo de locales comerciales</p>
+                                            </td>
+                                            <td nowrap>
+                                              <p class="enlaces"><img src="../assets/img/octicons/repo.svg" class="icon"></img><a href="https://github.com/opencitydata/listas-codigos-skos/blob/master/comercio/tipo-acceso.ttl" target="_blank">repositorio</a></p>
+                                            </td>
+                                            <td>
+                                              <p class="cabiertas__text__uncollapse-text">Lista que recoge los tipos de acceso a los locales comerciales</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><a class="link" href="http://vocab.linkeddata.es/datosabiertos/kos/comercio/tipo-estado-tramite-licencia" target="_blank">Tipo de estado de trámite de la licencia</a></td>
+                                            <td nowrap>
+                                              <p class="link"><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"> <label class="highlight link">CC-BY</label></a></p>
+                                            </td>
+                                            <td nowrap>
+                                              <p class="link"><a href="http://www.lexvo.org/page/iso639-3/spa" target="_blank"><label class="highlight link">es</label></a></p>
+                                            </td>
+                                            <td nowrap>
+                                              <p class="link"><label class="highlight">comercio</label></p>
+                                            </td>
+                                            <td>
+                                              <p class="cabiertas__text__uncollapse-text">censo de locales comerciales</p>
+                                            </td>
+                                            <td nowrap>
+                                              <p class="enlaces"><img src="../assets/img/octicons/repo.svg" class="icon"></img><a href="https://github.com/opencitydata/listas-codigos-skos/blob/master/comercio/tipo-estado-tramite-licencia.ttl" target="_blank">repositorio</a></p>
+                                            </td>
+                                            <td>
+                                              <p class="cabiertas__text__uncollapse-text">Lista que recoge los tipos de estado de tramitación de las licencias de apertura</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><a class="link" href="http://vocab.linkeddata.es/datosabiertos/kos/comercio/tipo-agrupacion" target="_blank">Tipo de agrupación</a></td>
+                                            <td nowrap>
+                                              <p class="link"><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"> <label class="highlight link">CC-BY</label></a></p>
+                                            </td>
+                                            <td nowrap>
+                                              <p class="link"><a href="http://www.lexvo.org/page/iso639-3/spa" target="_blank"><label class="highlight link">es</label></a></p>
+                                            </td>
+                                            <td nowrap>
+                                              <p class="link"><label class="highlight">comercio</label></p>
+                                            </td>
+                                            <td>
+                                              <p class="cabiertas__text__uncollapse-text">censo de locales comerciales</p>
+                                            </td>
+                                            <td nowrap>
+                                              <p class="enlaces"><img src="../assets/img/octicons/repo.svg" class="icon"></img><a href="https://github.com/opencitydata/listas-codigos-skos/blob/master/comercio/tipo-agrupacion.ttl" target="_blank">repositorio</a></p>
+                                            </td>
+                                            <td>
+                                              <p class="cabiertas__text__uncollapse-text">Lista que recoge los tipos de agrupaciones comerciales</p>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                              </table>
+
+                         </div>
+                      </div>
+
+
+                      <div id="tabPanel4" role="tabPanel" aria-labelledby="tab4-label" class="tabs__panel__item js-tabs-panel-item">
+                         <div class="lineasActuacion__publications">
+                              <h4 class="lineasActuacion__sectionTitle"></h4>
+                              <p class="cabiertas__text">A continuación se muestra el listado de vocabularios que se reutilizan dentro de la iniciativa de Ciudades Abiertas. Es importante mencionar que para el desarrollo de estos vocabularios no se ha seguido explícitamente la metodología que se está empleando para este proyecto. Por lo tanto, no se dispone de documentación relacionada con los Casos de Uso, Historias de Usuario, etc.</p>
+
+                              <table>
+                                <caption hidden="true">Vocabularios Reutilizados</caption>
                                     <thead>
                                     <th>Vocabulario</th>
                                     <th>Prefijo</th>
@@ -193,52 +613,194 @@ Copyright 2018 Ayuntamiento de A Coruña, Ayuntamiento de Madrid, Ayuntamiento d
                                     </thead>
                                     <tbody>
                                         <tr>
-                                        <td><a class="link" href="http://vocab.ciudadesabiertas.es/def/comercio/tejido-comercial" target="_blank">{{page.table-vocabulario}}</a></td>
-                                        <td>
-                                        <label>escom</label>
-                                        </td>
-                                        <td nowrap>
-                                         <p class="link"><a href="#" target="_blank"><label class="highlight">rdf+xml</label></a></p>
-                                         <p class="link"><a href="#" target="_blank"><label class="highlight">html</label></a></p>
-                                         <p class="link"><a href="#" target="_blank"><label class="highlight">turtle</label></a></p>
-                                        </td>
-                                        <td nowrap><p class="link"><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"> <label class="highlight link">CC-BY</label></a></p>
-                                        </td>
-                                        <td nowrap>
-                                        <p class="link"><a href="http://www.lexvo.org/page/iso639-3/spa" target="_blank"><label class="highlight link">es</label></a></p>
-                                        <p class="link"><a href="http://www.lexvo.org/page/iso639-3/eng" target="_blank"><label class="highlight link">en</label></a></p>
-                                        </td>
-                                        <td nowrap>
-                                        <p class="link"><label class="highlight"> comercio</label></p>
-                                        <p class="link"><label class="highlight"> tejido comercial</label></p>
-                                        </td>
-                                        <td nowrap>
-                                        <p class="enlaces"><img src="/assets/img/octicons/repo.svg" class="icon"></img><a href="https://github.com/CiudadesAbiertas/vocab-comercio-censo-locales" target="_blank">repositorio </a></p>
-                                        <p class="enlaces"><img src="/assets/img/octicons/issue-opened.svg" class="icon"></img><a href="https://github.com/CiudadesAbiertas/vocab-comercio-censo-locales/wiki/Gesti%C3%B3n-de-issues" target="_blank">issues</a></p>
-                                        <p class="enlaces"><img src="/assets/img/octicons/tasklist.svg" class="icon-tasklist"></img><a href="https://github.com/CiudadesAbiertas/vocab-comercio-censo-locales/blob/master/requirements/Requisitos-Censo%20de%20locales%2C%20terrazas%2C%20licencias%20de%20actividades%20.xlsx" target="_blank">requisitos </a></p>
-                                        <p class="enlaces"><img src="/assets/img/octicons/tag.svg" class="icon"></img><a href="https://github.com/CiudadesAbiertas/vocab-comercio-censo-locales/releases" target="_blank">releases</a></p>
-                                        <p class="enlaces"><img src="/assets/img/octicons/play.svg" class="icon"></img><a href="https://youtu.be/LCgEPuI8KD8" target="_blank">webinar</a></p>
-                                        </td>
-                                        <td>
-
-                                        {{page.table-description}}
-                                        <!--{{page.table-description-hidden}}
-                                        <a href="#3a" id="toggle">Leer más...</a>
-                                        -->
-
-                                        </td>
+                                            <td><a class="link" href="http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio" target="_blank">Territorio</a></td>
+                                            <td><label>esadm</label></td>
+                                            <td nowrap>
+                                              <p class="link"><a href="#" target="_blank"><label class="highlight">rdf+xml</label></a></p>
+                                              <p class="link"><a href="#" target="_blank"><label class="highlight">html</label></a></p>
+                                              <p class="link"><a href="#" target="_blank"><label class="highlight">turtle</label></a></p>
+                                            </td>
+                                            <td nowrap>
+                                              <p class="link"><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"> <label class="highlight link">CC-BY</label></a></p>
+                                            </td>
+                                            <td nowrap>
+                                              <p class="link"><a href="http://www.lexvo.org/page/iso639-3/spa" target="_blank"><label class="highlight link">es</label></a></p>
+                                            </td>
+                                            <td nowrap>
+                                              <p class="link"><label class="highlight">sector-publico</label></p>
+                                            </td>
+                                            <td nowrap>
+                                              <p class="enlaces"><img src="../assets/img/octicons/repo.svg" class="icon"></img><a href="https://github.com/opencitydata/sector-publico-territorio" target="_blank">repositorio</a></p>
+                                            </td>
+                                            <td>
+                                              <p class="cabiertas__text__uncollapse-text">Vocabulario para la descripción de territorios en España (incluyendo divisiones administrativas y también otros conceptos que se utilizan normalmente pero no tienen entidad jurídica, como por ejemplo barrios).</p>
+                                            </td>
                                         </tr>
-
-
-
-
+                                        <tr>
+                                            <td><a class="link" href="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero" target="_blank">Callejero</a></td>
+                                            <td><label>escjr</label></td>
+                                            <td nowrap>
+                                              <p class="link"><a href="#" target="_blank"><label class="highlight">rdf+xml</label></a></p>
+                                              <p class="link"><a href="#" target="_blank"><label class="highlight">html</label></a></p>
+                                              <p class="link"><a href="#" target="_blank"><label class="highlight">turtle</label></a></p>
+                                            </td>
+                                            <td nowrap>
+                                              <p class="link"><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"> <label class="highlight link">CC-BY</label></a></p>
+                                            </td>
+                                            <td nowrap>
+                                              <p class="link"><a href="http://www.lexvo.org/page/iso639-3/spa" target="_blank"><label class="highlight link">es</label></a></p>
+                                            </td>
+                                            <td nowrap>
+                                              <p class="link"><label class="highlight">urbanismo-infraestructuras</label></p>
+                                            </td>
+                                            <td nowrap>
+                                              <p class="enlaces"><img src="../assets/img/octicons/repo.svg" class="icon"></img><a href="https://github.com/opencitydata/urbanismo-infraestructuras-callejero" target="_blank">repositorio</a></p>
+                                            </td>
+                                            <td>
+                                              <p class="cabiertas__text__uncollapse-text">Vocabulario para la representación de los datos de callejero de una ciudad.</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><a class="link" href="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal" target="_blank">Dirección Postal</a></td>
+                                            <td><label>esdir</label></td>
+                                            <td nowrap>
+                                              <p class="link"><a href="#" target="_blank"><label class="highlight">rdf+xml</label></a></p>
+                                              <p class="link"><a href="#" target="_blank"><label class="highlight">html</label></a></p>
+                                              <p class="link"><a href="#" target="_blank"><label class="highlight">turtle</label></a></p>
+                                            </td>
+                                            <td nowrap>
+                                              <p class="link"><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"> <label class="highlight link">CC-BY</label></a></p>
+                                            </td>
+                                            <td nowrap>
+                                              <p class="link"><a href="http://www.lexvo.org/page/iso639-3/spa" target="_blank"><label class="highlight link">es</label></a></p>
+                                            </td>
+                                            <td nowrap>
+                                              <p class="link"><label class="highlight">urbanismo-infraestructuras</label></p>
+                                            </td>
+                                            <td nowrap>
+                                              <p class="enlaces"><img src="../assets/img/octicons/repo.svg" class="icon"></img><a href="https://github.com/opencitydata/commons-direccion-postal" target="_blank">repositorio</a></p>
+                                            </td>
+                                            <td>
+                                              <p class="cabiertas__text__uncollapse-text">Vocabulario para la representación de datos de una dirección postal.</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><a class="link" href="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento-municipal" target="_blank">Equipamiento Municipal</a></td>
+                                            <td><label>esequip</label></td>
+                                            <td nowrap>
+                                              <p class="link"><a href="#" target="_blank"><label class="highlight">rdf+xml</label></a></p>
+                                              <p class="link"><a href="#" target="_blank"><label class="highlight">html</label></a></p>
+                                              <p class="link"><a href="#" target="_blank"><label class="highlight">turtle</label></a></p>
+                                            </td>
+                                            <td nowrap>
+                                              <p class="link"><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"> <label class="highlight link">CC-BY</label></a></p>
+                                            </td>
+                                            <td nowrap>
+                                              <p class="link"><a href="http://www.lexvo.org/page/iso639-3/spa" target="_blank"><label class="highlight link">es</label></a></p>
+                                            </td>
+                                            <td nowrap>
+                                              <p class="link"><label class="highlight">urbanismo-infraestructuras</label></p>
+                                            </td>
+                                            <td nowrap>
+                                              <p class="enlaces"><img src="../assets/img/octicons/repo.svg" class="icon"></img><a href="https://github.com/opencitydata/sociedad-bienestar-equipamientos-municipales" target="_blank">repositorio</a></p>
+                                            </td>
+                                            <td>
+                                              <p class="cabiertas__text__uncollapse-text">Vocabulario para la representación de datos de equipamientos de una ciudad.</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><a class="link" href="http://vocab.linkeddata.es/datosabiertos/def/sector-publico/subvencion/index-en.html" target="_blank">Subvenciones</a></td>
+                                            <td><label>essub</label></td>
+                                            <td nowrap>
+                                              <p class="link"><a href="#" target="_blank"><label class="highlight">rdf+xml</label></a></p>
+                                              <p class="link"><a href="#" target="_blank"><label class="highlight">html</label></a></p>
+                                              <p class="link"><a href="#" target="_blank"><label class="highlight">turtle</label></a></p>
+                                            </td>
+                                            <td nowrap>
+                                              <p class="link"><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"> <label class="highlight link">CC-BY</label></a></p>
+                                            </td>
+                                            <td nowrap>
+                                              <p class="link"><a href="http://www.lexvo.org/page/iso639-3/spa" target="_blank"><label class="highlight link">es</label></a></p>
+                                            </td>
+                                            <td nowrap>
+                                              <p class="link"><label class="highlight">sector-publico</label></p>
+                                            </td>
+                                            <td nowrap>
+                                              <p class="enlaces"><img src="../assets/img/octicons/repo.svg" class="icon"></img><a href="https://github.com/opencitydata/sector-publico-subvenciones-ayudas" target="_blank">repositorio</a></p>
+                                            </td>
+                                            <td>
+                                              <p class="cabiertas__text__uncollapse-text">Vocabulario para la descripción de los datos relacionados con las subvenciones concedidas por un municipio.</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><a class="link" href="https://datos.ign.es/def/geo_core" target="_blank">Objetos Geográficos</a></td>
+                                            <td><label>geo_core</label></td>
+                                            <td nowrap>
+                                              <p class="link"><a href="#" target="_blank"><label class="highlight">rdf+xml</label></a></p>
+                                              <p class="link"><a href="#" target="_blank"><label class="highlight">html</label></a></p>
+                                              <p class="link"><a href="#" target="_blank"><label class="highlight">turtle</label></a></p>
+                                            </td>
+                                            <td nowrap>
+                                              <p class="link"><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"> <label class="highlight link">CC-BY</label></a></p>
+                                            </td>
+                                            <td nowrap>
+                                              <p class="link"><a href="http://www.lexvo.org/page/iso639-3/spa" target="_blank"><label class="highlight link">es</label></a></p>
+                                            </td>
+                                            <td nowrap>
+                                              <p class="link"><label class="highlight">geospatial</label></p>
+                                            </td>
+                                            <td nowrap>
+                                              <p class="enlaces"><img src="../assets/img/octicons/repo.svg" class="icon"></img><a href="https://github.com/oeg-upm/ontology-BTN100" target="_blank">repositorio</a></p>
+                                            </td>
+                                            <td>
+                                              <p class="cabiertas__text__uncollapse-text">Vocabulario para la representación de datos geoespaciales, es decir aquellos datos que implícita o explícitamente se refieren a una localización relativa a la Tierra.</p>
+                                            </td>
+                                        </tr>
                                     </tbody>
-
-                                </table>
-                              {% endif %}
+                              </table>
 
                          </div>
+                      </div>
+                        {% endif %}
+
+
+                        {% if page.class-threeTabs-datosAbiertos %}
+                        <div id="tabPanel2" role="tabPanel" aria-labelledby="tab2-label" class="tabs__panel__item js-tabs-panel-item">
+
+                           <p class="cabiertas__text">Dentro del proyecto Ciudades Abiertas se ha puesto en marcha el <a href="https://datos.santiagodecompostela.gal" target="_blank">Portal de Datos Abiertos de Santiago de Compostela</a> que permitirá la publicación de los datos municipales y facilitará el acceso y la reutilización de los datos por terceros (ciudadanos y empresas). Su estructura, detallada a continuación, puede servir de modelo o referencia para ayuntamientos que pretendan poner en marcha su propio portal de datos abiertos.</p>
+                           <div class="lineasActuacion__section">
+                               <h2 class="cabiertas__title">Tecnología</h2>
+                               <p class="cabiertas__text">La tecnología utilizada en el Portal de Datos Abiertos de Santiago de Compostela se basa en una arquitectura Open Source que combina diferentes componentes para cubrir las necesidades funcionales del proyecto. La plataforma integra principalmente una herramienta de gestión de conjuntos de datos basada en CKAN y un gestor de contenidos en Drupal.</p>
+
+                               <h2 class="cabiertas__subtitle">Diagrama de arquitectura</h2>
+                               <p class="cabiertas__text">A continuación se puede observar un diagrama de arquitectura de alto nivel y una breve descripción de cada una de las capas.</p>
+                               <p class="cabiertas__text" style="text-align: center;"><img src="../assets/img/cabiertas/arquitectura-portal-Santiago.png" alt="Diagrama de arquitectura del Portal de Datos Abiertos de Santiago de Compostela" height="500px"></p>
+                               <ol class="lista__custom__second">
+                                 <li class="list__element__numbered">
+                                   <div class="lineasActuacion__section"><strong>Proxy inverso</strong>: a través de Varnish se gestiona el enrutamiento a los gestores.</div>
+                                 </li>
+                                 <li class="list__element__numbered">
+                                   <div class="lineasActuacion__section"><strong>Portal de contenidos</strong>: desarrollado sobre el gestor de contenidos Drupal; gestiona el contenido editorial del proyecto.</div>
+                                 </li>
+                                 <li class="list__element__numbered">
+                                   <div class="lineasActuacion__section"><strong>Catálogo de datos</strong>: implementado sobre CKAN; contiene el repositorio único de metadatos.</div>
+                                 </li>
+                                 <li class="list__element__numbered">
+                                   <div class="lineasActuacion__section"><strong>Motor de indexación</strong>: implementado sobre Apache Solr; provee de capacidades de búsqueda tanto para el portal de contenidos como para el catálogo de datos.</div>
+                                 </li>
+                                 <li class="list__element__numbered">
+                                   <div class="lineasActuacion__section"><strong>Capa de persistencia</strong>: repositorio de datos para el portal de contenidos y el catálogo de datos; implementado en MySQL y PostgreSQL.</div>
+                                 </li>
+                               </ol>
+
+                               <h2 class="cabiertas__subtitle">Código fuente</h2>
+                               <p class="cabiertas__text">El código fuente del proyecto está disponible en <a href="https://github.com/concello-santiago-de-compostela/portal-datos-abertos" target="_blank">GitHub</a>. Se han publicado todas las extensiones desarrolladas para CKAN, así como los módulos contrib, features y theme de Drupal.</p>
+                               <p class="cabiertas__text">Para cualquier consulta acerca de la tecnología de la plataforma, puede ponerse en contacto con nosotros a través del <a href="/contacto/index.html">punto de contacto</a>.</p>
+                           </div>
+
                         </div>
+                        {% endif %}
+
                         <!--<script>
                         $(document).ready(function() {
                         $("#toggle").click(function() {
